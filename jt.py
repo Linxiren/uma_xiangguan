@@ -19,26 +19,12 @@ BUTTONS = {
     '力': (300, 1040),
     '根': (420, 1040),
     '智': (540, 1040),
-    'S': (660, 1040),
+    'SS': (660, 1040),
     '休息': (125, 945),
     '出行': (280, 1175),
     '比赛': (610, 1175),
     '友人': (350, 395),
     '担当': (350, 645)
-}
-
-# 选项类型映射
-ACTION_TYPES = {
-    6: "速",
-    7: "耐",
-    8: "力", 
-    9: "根",
-    10: "智",
-    11: "S",
-    12: "休息",
-    13: "友人出行",
-    14: "单独出行",
-    15: "比赛"
 }
 
 def adb_click(x, y, delay=0.3):
@@ -57,13 +43,36 @@ def perform_action(action_name):
     """执行完整的操作流程"""
     print(f"执行操作: {action_name}")
     
-    if action_name.endswith("训练"):
-        # 处理属性训练
+    if action_name == "速训练":
         adb_click(*BUTTONS['训练'])
-        prop = action_name[0]  # 取首字（速/耐/力/根/智/SS）
-        adb_click(*BUTTONS[prop])
-        adb_click(*BUTTONS[prop])  # 需要点击两次
-        
+        adb_click(*BUTTONS['速'])
+        adb_click(*BUTTONS['速'])
+
+    elif action_name == "耐训练":
+        adb_click(*BUTTONS['训练'])
+        adb_click(*BUTTONS['耐'])
+        adb_click(*BUTTONS['耐'])
+
+    elif action_name == "力训练":
+        adb_click(*BUTTONS['训练'])
+        adb_click(*BUTTONS['力'])
+        adb_click(*BUTTONS['力'])
+
+    elif action_name == "根训练":
+        adb_click(*BUTTONS['训练'])
+        adb_click(*BUTTONS['根'])
+        adb_click(*BUTTONS['根'])
+
+    elif action_name == "智训练":
+        adb_click(*BUTTONS['训练'])
+        adb_click(*BUTTONS['智'])
+        adb_click(*BUTTONS['智'])
+
+    elif action_name == "SS训练":
+        adb_click(*BUTTONS['训练'])
+        adb_click(*BUTTONS['SS'])
+        adb_click(*BUTTONS['SS'])
+
     elif action_name == "休息":
         adb_click(*BUTTONS['休息'])
         
@@ -86,7 +95,7 @@ def parse_umaai_data(parameters):
         "力训练": float(parameters[8]),
         "根训练": float(parameters[9]),
         "智训练": float(parameters[10]),
-        "S训练": float(parameters[11]),
+        "SS训练": float(parameters[11]),
         "休息": float(parameters[12]),
         "友人出行": float(parameters[13]),
         "单独出行": float(parameters[14]),
@@ -160,12 +169,12 @@ def packet_handler(pkt):
             # 解析JSON数据
             if "PrintUmaAiResult" in result:
                 data = json.loads(result)
-                params = data["Parameters"]
+                Parameters = data["Parameters"]
                 
                 # 提取有效参数（过滤掉前缀）
-                scores = [float(p) for p in params if p.replace('.','',1).isdigit()]
-                
-                if len(scores) >= 14:
+                params = [float(p) if not p.startswith('-') and p.replace('.', '', 1).isdigit() else 0.0 for p in Parameters[0].split()]
+
+                if len(params) >= 14:
                     best_action = parse_umaai_data(params)
                     perform_action(best_action)
 
