@@ -1,14 +1,15 @@
 import psutil
-import pyshark
+from scapy.all import *
 import binascii
-from threading import Event
-import time
 import json
 import subprocess
 from time import sleep
+import asyncio
+from concurrent.futures import ThreadPoolExecutor
+import threading
 
 # 雷电模拟器adb配置
-ADB_PATH = r"E:\leidian\LDPlayer9\adb.exe"  # 修改为你的adb路径
+ADB_PATH = r"E:\leidian\LDPlayer9\adb.exe"
 DEVICE_ID = "emulator-5554"
 
 # 按钮坐标配置（720x1280分辨率）
@@ -27,7 +28,18 @@ BUTTONS = {
     '担当': (350, 645)
 }
 
-def adb_click(x, y, delay=0.3):
+# 配置参数
+TARGET_EXE = r"E:\凯旋门黑板\UmaAi神经网络版（Nvidia显卡专属）.exe"
+FIXED_DST_PORT = 4693
+HEARTBEAT_MAX_LEN = 60
+
+# 全局变量
+target_ports = set()
+executor = ThreadPoolExecutor(max_workers=4)
+packet_buffer = asyncio.Queue()
+processing = True
+
+def adb_click(x, y, delay=0.5):
     cmd = f'"{ADB_PATH}" -s {DEVICE_ID} shell input tap {x} {y}'
     try:
         result = subprocess.run(cmd, shell=True, capture_output=True, text=True, timeout=5)
@@ -43,49 +55,21 @@ def perform_action(action_name):
     """执行完整的操作流程"""
     print(f"执行操作: {action_name}")
     
-    if action_name == "速训练":
-        adb_click(*BUTTONS['训练'])
-        adb_click(*BUTTONS['速'])
-        adb_click(*BUTTONS['速'])
-
-    elif action_name == "耐训练":
-        adb_click(*BUTTONS['训练'])
-        adb_click(*BUTTONS['耐'])
-        adb_click(*BUTTONS['耐'])
-
-    elif action_name == "力训练":
-        adb_click(*BUTTONS['训练'])
-        adb_click(*BUTTONS['力'])
-        adb_click(*BUTTONS['力'])
-
-    elif action_name == "根训练":
-        adb_click(*BUTTONS['训练'])
-        adb_click(*BUTTONS['根'])
-        adb_click(*BUTTONS['根'])
-
-    elif action_name == "智训练":
-        adb_click(*BUTTONS['训练'])
-        adb_click(*BUTTONS['智'])
-        adb_click(*BUTTONS['智'])
-
-    elif action_name == "SS训练":
-        adb_click(*BUTTONS['训练'])
-        adb_click(*BUTTONS['SS'])
-        adb_click(*BUTTONS['SS'])
-
-    elif action_name == "休息":
-        adb_click(*BUTTONS['休息'])
-        
-    elif action_name == "友人出行":
-        adb_click(*BUTTONS['出行'])
-        adb_click(*BUTTONS['友人'])
-        
-    elif action_name == "单独出行":
-        adb_click(*BUTTONS['出行'])
-        adb_click(*BUTTONS['担当'])
-        
-    elif action_name == "比赛":
-        adb_click(*BUTTONS['比赛'])
+    actions = {
+        "速训练": lambda: [adb_click(*BUTTONS['训练']), adb_click(*BUTTONS['速']), adb_click(*BUTTONS['速'])],
+        "耐训练": lambda: [adb_click(*BUTTONS['训练']), adb_click(*BUTTONS['耐']), adb_click(*BUTTONS['耐'])],
+        "力训练": lambda: [adb_click(*BUTTONS['训练']), adb_click(*BUTTONS['力']), adb_click(*BUTTONS['力'])],
+        "根训练": lambda: [adb_click(*BUTTONS['训练']), adb_click(*BUTTONS['根']), adb_click(*BUTTONS['根'])],
+        "智训练": lambda: [adb_click(*BUTTONS['训练']), adb_click(*BUTTONS['智']), adb_click(*BUTTONS['智'])],
+        "SS训练": lambda: [adb_click(*BUTTONS['训练']), adb_click(*BUTTONS['SS']), adb_click(*BUTTONS['SS'])],
+        "休息": lambda: [adb_click(*BUTTONS['休息'])],
+        "友人出行": lambda: [adb_click(*BUTTONS['出行']), adb_click(*BUTTONS['友人'])],
+        "单独出行": lambda: [adb_click(*BUTTONS['出行']), adb_click(*BUTTONS['担当'])],
+        "比赛": lambda: [adb_click(*BUTTONS['比赛'])]
+    }
+    
+    if action := actions.get(action_name):
+        action()
 
 def parse_umaai_data(parameters):
     """解析umaai数据并返回最佳选项"""
@@ -102,18 +86,9 @@ def parse_umaai_data(parameters):
         "比赛": float(parameters[15])
     }
     
-    # 找到最高分选项
     best_action = max(scores, key=scores.get)
     print(f"当前回合建议: {best_action} (分数: {scores[best_action]})")
     return best_action
-
-# 配置参数
-TARGET_EXE = r"E:\凯旋门黑板\UmaAi神经网络版（Nvidia显卡专属）.exe"
-FIXED_DST_PORT = 4693
-HEARTBEAT_MAX_LEN = 60
-
-# 全局变量
-target_ports = set()
 
 def get_target_ports_once():
     """启动时一次性获取目标端口"""
@@ -131,85 +106,103 @@ def get_target_ports_once():
 def websocket_decrypt(raw_data):
     """优化后的解密函数"""
     try:
-        data = bytes.fromhex(raw_data.replace(':', ''))
-        if len(data) < 8:
+        # 快速检查数据有效性
+        if len(raw_data) < 16:  # 至少需要8字节
             return None
             
-        mask_key = data[4:8]
-        masked_payload = data[8:]
-        return bytes([b ^ mask_key[i % 4] for i, b in enumerate(masked_payload)]).decode('utf-8', 'ignore')
+        # 直接处理二进制数据，跳过hex转换
+        mask_key = raw_data[4:8]
+        masked_payload = raw_data[8:]
+        
+        # 使用列表推导式优化解密过程
+        decrypted = bytes(b ^ mask_key[i % 4] for i, b in enumerate(masked_payload))
+        return decrypted.decode('utf-8', 'ignore')
     except Exception as e:
-        print(f"解密失败: {str(e)}")
         return None
 
-def packet_handler(pkt):
-    """优化后的包处理函数"""
-    try:
-        # 提前过滤无效包
-        if 'TCP' not in pkt or not pkt.tcp.payload:
-            return
-
-        src_port = int(pkt.tcp.srcport)
-        dst_port = int(pkt.tcp.dstport)
-
-        # 快速过滤条件
-        if dst_port != FIXED_DST_PORT or src_port not in target_ports:
-            return
-
-        payload = pkt.tcp.payload
-        payload_len = len(payload)//2
-
-        if payload_len < HEARTBEAT_MAX_LEN:
-            return
-
-        # 立即处理解密
-        if result := websocket_decrypt(payload):
-            print(f"解密结果:\n{'-'*30}\n{result}\n{'-'*30}")
-            
-            # 解析JSON数据
-            if "PrintUmaAiResult" in result:
-                data = json.loads(result)
-                Parameters = data["Parameters"]
+async def process_packet_queue():
+    """异步处理数据包队列"""
+    while processing:
+        try:
+            packet_data = await packet_buffer.get()
+            if "PrintUmaAiResult" in packet_data:
+                data = json.loads(packet_data)
+                params = data["Parameters"][0].split()
+                params = [float(p) if not p.startswith('-') and p.replace('.', '', 1).isdigit() else 0.0 
+                         for p in params]
                 
-                # 提取有效参数（过滤掉前缀）
-                params = [float(p) if not p.startswith('-') and p.replace('.', '', 1).isdigit() else 0.0 for p in Parameters[0].split()]
-
                 if len(params) >= 14:
                     best_action = parse_umaai_data(params)
-                    perform_action(best_action)
+                    sleep(2.5)
+                    executor.submit(perform_action, best_action)
+            
+            packet_buffer.task_done()
+        except Exception as e:
+            print(f"处理包异常: {str(e)}")
 
+def packet_callback(packet):
+    """数据包回调函数"""
+    try:
+        if not packet.haslayer(TCP):
+            return
+            
+        # 快速过滤
+        if packet[TCP].dport != FIXED_DST_PORT or packet[TCP].sport not in target_ports:
+            return
+            
+        # 检查是否有负载
+        if not packet.haslayer(Raw):
+            return
+            
+        payload = bytes(packet[Raw])
+        if len(payload) < HEARTBEAT_MAX_LEN:
+            return
+            
+        if result := websocket_decrypt(payload):
+            asyncio.run_coroutine_threadsafe(packet_buffer.put(result), loop)
+            
     except Exception as e:
-        print(f"包处理异常: {str(e)}")
+        print(f"回调异常: {str(e)}")
 
 def start_capture():
     """优化后的抓包函数"""
     print("启动高速流量监控...")
-    display_filter = f'tcp.dstport == {FIXED_DST_PORT} && tcp.srcport in {{{",".join(map(str, target_ports))}}}'
     
-    capture = pyshark.LiveCapture(
-        interface=r'\Device\NPF_Loopback',
-        display_filter=display_filter,
-        include_raw=True,
-        use_json=True,
-        only_summaries=False,
-        output_file=None,  # 禁用文件输出提升性能
-        use_ek=False,      # 禁用实验功能
-        debug=False
+    # 设置BPF过滤器，在抓包层面就过滤
+    filter_str = f"tcp and dst port {FIXED_DST_PORT} and ("
+    filter_str += " or ".join(f"src port {port}" for port in target_ports)
+    filter_str += ")"
+    
+    # 使用AsyncSniffer进行异步抓包
+    sniffer = AsyncSniffer(
+        iface=r'\Device\NPF_Loopback',
+        filter=filter_str,
+        prn=packet_callback,
+        store=0  # 不保存包，减少内存使用
     )
-
-    # 设置实时嗅探
-    capture.set_debug()
-    for pkt in capture.sniff_continuously(packet_count=0):
-        packet_handler(pkt)
+    
+    return sniffer
 
 if __name__ == '__main__':
     # 初始化目标端口
     get_target_ports_once()
     
-    # 启动抓包
+    # 创建事件循环
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+    
+    # 启动异步处理队列
+    loop.create_task(process_packet_queue())
+    
+    # 启动事件循环
+    threading.Thread(target=loop.run_forever, daemon=True).start()
+    
     while True:
         try:
-            start_capture()
+            # 启动抓包
+            sniffer = start_capture()
+            sniffer.start()
+            sniffer.join()
         except Exception as e:
             print(f"捕获异常: {str(e)}，3秒后重试...")
-            time.sleep(3)
+            sleep(3)
