@@ -10,9 +10,12 @@ import threading
 import cv2
 import numpy as np
 
+with open('config.json', 'r') as f:
+    config = json.load(f)
+
 # 雷电模拟器adb配置
-ADB_PATH = r"E:\leidian\LDPlayer9\adb.exe"
-DEVICE_ID = "emulator-5554"
+ADB_PATH = config["ADB_PATH"]
+DEVICE_ID = config["DEVICE_ID"]
 
 # 按钮坐标配置（720x1280分辨率）
 BUTTONS = {
@@ -67,7 +70,7 @@ BUTTONS = {
 }
 
 # 配置参数
-TARGET_EXE = r"E:\凯旋门黑板\UmaAi神经网络版（Nvidia显卡专属）.exe"
+TARGET_EXE = config["TARGET_EXE"]
 FIXED_DST_PORT = 4693
 HEARTBEAT_MAX_LEN = 60
 
@@ -107,26 +110,32 @@ def perform_action(action_name):
         "休息": lambda: [adb_click(*BUTTONS['休息']), sleep(0.5)],
         "友人出行": lambda: [adb_click(*BUTTONS['出行']), adb_click(*BUTTONS['友人']), sleep(0.5)],
         "单独出行": lambda: [adb_click(*BUTTONS['出行']), adb_click(*BUTTONS['担当']), sleep(0.5)],
-        "比赛": lambda: [adb_click(*BUTTONS['比赛']), adb_click(*BUTTONS['确认']), adb_click(*BUTTONS['确认参赛']), sleep(1), adb_click(*BUTTONS['观看结果']), sleep(2), adb_click(*BUTTONS['观看结果']), adb_click(*BUTTONS['返回']), sleep(1), adb_click(*BUTTONS['继续']), sleep(0.5), adb_click(*BUTTONS['继续']), sleep(0.5), adb_click(*BUTTONS['选择一']), sleep(0.5)],
+        "比赛": lambda: [adb_click(*BUTTONS['比赛']), adb_click(*BUTTONS['确认']), adb_click(*BUTTONS['确认参赛']), sleep(0.5)],
         "随机事件选择": lambda: [adb_click(*BUTTONS['选择二']), sleep(0.5)],
         "特殊事件选择": lambda: [adb_click(*BUTTONS['选择一']), sleep(0.5)],
         "出行事件选择": lambda: [adb_click(*BUTTONS['选择三']), sleep(0.5)],
-        "目标选择": lambda: [adb_click(*BUTTONS['选择四']), sleep(0.5)],
+        "目标选择一": lambda: [adb_click(*BUTTONS['选择五']), sleep(0.5)],
+        "目标选择二": lambda: [adb_click(*BUTTONS['选择四']), sleep(0.5)],
+        "目标选择三": lambda: [adb_click(*BUTTONS['选择三']), sleep(0.5)],
+        "目标选择四": lambda: [adb_click(*BUTTONS['选择二']), sleep(0.5)],
+        "目标选择五": lambda: [adb_click(*BUTTONS['选择一']), sleep(0.5)],
         "继承": lambda: [adb_click(*BUTTONS['确认']), sleep(0.5)],
-        "用闹钟": lambda: [adb_click(*BUTTONS['观看结果']), adb_click(*BUTTONS['继续']), adb_click(*BUTTONS['观看结果']), adb_click(*BUTTONS['观看结果']), adb_click(*BUTTONS['返回']), sleep(0.5)],
+        "用闹钟": lambda: [adb_click(*BUTTONS['观看结果']), adb_click(*BUTTONS['继续']), adb_click(*BUTTONS['观看结果']), sleep(2), adb_click(*BUTTONS['观看结果']), adb_click(*BUTTONS['返回']), sleep(0.5)],
         "赛前点适性": lambda: [adb_click(*BUTTONS['国外资质']), adb_click(*BUTTONS['远征_根']), adb_click(*BUTTONS['远征_升级']), adb_click(*BUTTONS['远征_耐']), adb_click(*BUTTONS['远征_升级']), adb_click(*BUTTONS['远征_力']), adb_click(*BUTTONS['远征_升级']), adb_click(*BUTTONS['远征_速']), adb_click(*BUTTONS['远征_升级']), adb_click(*BUTTONS['确认']), adb_click(*BUTTONS['远征_确认参赛']), sleep(4), adb_click(*BUTTONS['返回']), adb_click(*BUTTONS['返回']), sleep(0.5)],
         "呼出赛程一": lambda: [adb_click(*BUTTONS['比赛']), adb_click(*BUTTONS['国外资质']), adb_click(*BUTTONS['参赛行程表']), adb_click(*BUTTONS['参赛行程表']), adb_click(*BUTTONS['赛程表一']), adb_click(*BUTTONS['关闭']), sleep(0.5), adb_click(*BUTTONS['确认']), adb_click(*BUTTONS['确认参赛']), sleep(0.5)],
         "呼出赛程二": lambda: [adb_click(*BUTTONS['比赛']), adb_click(*BUTTONS['国外资质']), adb_click(*BUTTONS['参赛行程表']), adb_click(*BUTTONS['参赛行程表']), adb_click(*BUTTONS['赛程表二']), adb_click(*BUTTONS['关闭']), sleep(0.5), adb_click(*BUTTONS['确认']), adb_click(*BUTTONS['确认参赛']), sleep(0.5)],
         "呼出赛程三": lambda: [adb_click(*BUTTONS['比赛']), adb_click(*BUTTONS['国外资质']), adb_click(*BUTTONS['参赛行程表']), adb_click(*BUTTONS['参赛行程表']), adb_click(*BUTTONS['赛程表三']), adb_click(*BUTTONS['关闭']), sleep(0.5), adb_click(*BUTTONS['确认']), adb_click(*BUTTONS['确认参赛']), sleep(0.5)],
         "新人赛": lambda: [adb_click(*BUTTONS['确认']), sleep(1), adb_click(*BUTTONS['确认']), sleep(0.5), adb_click(*BUTTONS['确认参赛']), sleep(0.5)],
-        "开始比赛": lambda: [adb_click(*BUTTONS['观看结果']), sleep(4), adb_click(*BUTTONS['观看结果']), sleep(2), adb_click(*BUTTONS['返回']), sleep(0.5)],
+        "开始比赛": lambda: [adb_click(*BUTTONS['观看结果']), sleep(4), adb_click(*BUTTONS['返回']), sleep(2), adb_click(*BUTTONS['返回']), adb_click(*BUTTONS['返回']), sleep(0.5)],
         "比赛结束": lambda: [adb_click(*BUTTONS['继续']), sleep(2), adb_click(*BUTTONS['继续']), sleep(0.5)],
         "比赛结束补": lambda: [adb_click(*BUTTONS['继续'])],
         "凯旋门失败": lambda: [adb_click(*BUTTONS['观看结果']), adb_click(*BUTTONS['继续']), sleep(2), adb_click(*BUTTONS['继续']), sleep(0.5)],
         "目标达成": lambda: [adb_click(*BUTTONS['确认']), sleep(0.5)],
         "赛程赛": lambda: [adb_click(*BUTTONS['目标竞赛']), adb_click(*BUTTONS['目标竞赛']), sleep(1), adb_click(*BUTTONS['确认']), sleep(0.5), adb_click(*BUTTONS['确认参赛']), sleep(0.5)],
         "海外赛": lambda: [adb_click(*BUTTONS['确认']), sleep(1), adb_click(*BUTTONS['确认']), sleep(0.5), adb_click(*BUTTONS['远征_确认参赛']), sleep(0.5)],
-        "凯旋门": lambda: [adb_click(*BUTTONS['确认']), sleep(1), adb_click(*BUTTONS['确认']), sleep(0.5), adb_click(*BUTTONS['远征_确认参赛']), sleep(8), adb_click(*BUTTONS['观看结果'])],
+        "确认补": lambda: [adb_click(*BUTTONS['确认']), sleep(0.5), adb_click(*BUTTONS['确认参赛'])],
+        "海外确认参赛补": lambda: [adb_click(*BUTTONS['远征_确认参赛']), sleep(8), adb_click(*BUTTONS['返回']), adb_click(*BUTTONS['返回'])],
+        "凯旋门": lambda: [adb_click(*BUTTONS['确认']), sleep(1), adb_click(*BUTTONS['确认']), sleep(0.5), adb_click(*BUTTONS['远征_确认参赛']), sleep(8), adb_click(*BUTTONS['返回']), adb_click(*BUTTONS['返回'])],
         "目标赛": lambda: [adb_click(*BUTTONS['确认']), sleep(1), adb_click(*BUTTONS['确认']), sleep(0.5), adb_click(*BUTTONS['确认参赛']), sleep(0.5)],
         "技能点适性": lambda: [adb_click(*BUTTONS['确认']), adb_click(*BUTTONS['远征_技能点']), adb_click(*BUTTONS['远征_升级']), adb_click(*BUTTONS['远征_升级']), adb_click(*BUTTONS['确认']), adb_click(*BUTTONS['远征_确认参赛']), sleep(4), adb_click(*BUTTONS['返回']), adb_click(*BUTTONS['返回']), sleep(0.5)],
         "远征速": lambda: [adb_click(*BUTTONS['确认']), adb_click(*BUTTONS['远征_速']), adb_click(*BUTTONS['远征_升级']), adb_click(*BUTTONS['远征_升级']), adb_click(*BUTTONS['确认']), adb_click(*BUTTONS['远征_确认参赛']), sleep(4), adb_click(*BUTTONS['返回']), adb_click(*BUTTONS['返回']), sleep(1.5), adb_click(*BUTTONS['训练']), adb_click(*BUTTONS['速']), adb_click(*BUTTONS['速']), sleep(0.5)],
@@ -160,112 +169,109 @@ def perform_action(action_name):
         print(f"未知的操作: {action_name}")
 
 def parse_umaai_data(parameters):
-    """解析umaai数据并返回最佳选项"""
     global current_round, best_action
     scores = {
         "回合数": float(parameters[1]),
-        "速训练": float(parameters[6]),
-        "耐训练": float(parameters[7]),
-        "力训练": float(parameters[8]),
-        "根训练": float(parameters[9]) - 20,
-        "智训练": float(parameters[10]) - 50,
-        "SS训练": float(parameters[11]),
-        "休息": float(parameters[12]),
-        "友人出行": float(parameters[13]),
-        "单独出行": float(parameters[14]),
-        "比赛": float(parameters[15])
+        "速训练": float(parameters[6]) + config["normal_scores"]["速训练"],
+        "耐训练": float(parameters[7]) + config["normal_scores"]["耐训练"],
+        "力训练": float(parameters[8]) + config["normal_scores"]["力训练"],
+        "根训练": float(parameters[9]) + config["normal_scores"]["根训练"],
+        "智训练": float(parameters[10]) + config["normal_scores"]["智训练"],
+        "SS训练": float(parameters[11]) + config["normal_scores"]["SS训练"],
+        "休息": float(parameters[12]) + config["normal_scores"]["休息"],
+        "友人出行": float(parameters[13]) + config["normal_scores"]["友人出行"],
+        "单独出行": float(parameters[14]) + config["normal_scores"]["单独出行"],
+        "比赛": float(parameters[15]) + config["normal_scores"]["比赛"]
     }
-    
+
     current_round = int(scores["回合数"])
     best_action = max(scores, key=scores.get)
     print(f"当前回合: {current_round}, 建议操作: {best_action} (分数: {scores[best_action]})")
     return best_action
 
 def parse_umaai_data_ss(parameters):
-    """解析umaai数据并返回最佳选项"""
     global current_round, best_action
     scores = {
         "回合数": float(parameters[1]),
-        "速训练": float(parameters[6]),
-        "耐训练": float(parameters[7]),
-        "力训练": float(parameters[8]),
-        "根训练": float(parameters[9]),
-        "智训练": float(parameters[10]) + 240,
-        "SS训练": float(parameters[11]) + 320,
-        "休息": float(parameters[12]) + 160,
-        "友人出行": float(parameters[13]) + 400,
-        "单独出行": float(parameters[14]),
-        "比赛": float(parameters[15])
+        "速训练": float(parameters[6]) + config["ss_scores"]["速训练"],
+        "耐训练": float(parameters[7]) + config["ss_scores"]["耐训练"],
+        "力训练": float(parameters[8]) + config["ss_scores"]["力训练"],
+        "根训练": float(parameters[9]) + config["ss_scores"]["根训练"],
+        "智训练": float(parameters[10]) + config["ss_scores"]["智训练"],
+        "SS训练": float(parameters[11]) + config["ss_scores"]["SS训练"],
+        "休息": float(parameters[12]) + config["ss_scores"]["休息"],
+        "友人出行": float(parameters[13]) + config["ss_scores"]["友人出行"],
+        "单独出行": float(parameters[14]) + config["ss_scores"]["单独出行"],
+        "比赛": float(parameters[15]) + config["ss_scores"]["比赛"]
     }
-    
+
     current_round = int(scores["回合数"])
     best_action = max(scores, key=scores.get)
     print(f"当前回合: {current_round}, 建议操作: {best_action} (分数: {scores[best_action]})")
     return best_action
 
 def parse_umaai_data_summer1(parameters):
-    """解析umaai数据并返回最佳选项"""
     global current_round, best_action
     scores = {
         "回合数": float(parameters[1]),
-        "速训练": float(parameters[6]),
-        "耐训练": float(parameters[7]),
-        "力训练": float(parameters[8]),
-        "根训练": float(parameters[9]) -15,
-        "智训练": float(parameters[10]) - 40,
-        "SS训练": float(parameters[11]),
-        "休息": float(parameters[12]),
-        "友人出行": float(parameters[13]),
-        "单独出行": float(parameters[14]),
-        "比赛": float(parameters[15]),
-        "远征速": float(parameters[16]),
-        "远征耐": float(parameters[17]),
-        "远征力": float(parameters[18]),
-        "远征根": float(parameters[19]) - 15,
-        "远征智": float(parameters[20]) - 30,
+        "速训练": float(parameters[6]) + config["summer1_scores"]["速训练"],
+        "耐训练": float(parameters[7]) + config["summer1_scores"]["耐训练"],
+        "力训练": float(parameters[8]) + config["summer1_scores"]["力训练"],
+        "根训练": float(parameters[9]) + config["summer1_scores"]["根训练"],
+        "智训练": float(parameters[10]) + config["summer1_scores"]["智训练"],
+        "SS训练": float(parameters[11]) + config["summer1_scores"]["SS训练"],
+        "休息": float(parameters[12]) + config["summer1_scores"]["休息"],
+        "友人出行": float(parameters[13]) + config["summer1_scores"]["友人出行"],
+        "单独出行": float(parameters[14]) + config["summer1_scores"]["单独出行"],
+        "比赛": float(parameters[15]) + config["summer1_scores"]["比赛"],
+        "远征速": float(parameters[16]) + config["summer1_scores"].get("远征速", 0),
+        "远征耐": float(parameters[17]) + config["summer1_scores"].get("远征耐", 0),
+        "远征力": float(parameters[18]) + config["summer1_scores"].get("远征力", 0),
+        "远征根": float(parameters[19]) + config["summer1_scores"].get("远征根", 0),
+        "远征智": float(parameters[20]) + config["summer1_scores"].get("远征智", 0),
     }
-    
+
     current_round = int(scores["回合数"])
     best_action = max(scores, key=scores.get)
     print(f"当前回合: {current_round}, 建议操作: {best_action} (分数: {scores[best_action]})")
     return best_action
 
 def parse_umaai_data_summer2(parameters):
-    """解析umaai数据并返回最佳选项"""
     global current_round, best_action
     scores = {
         "回合数": float(parameters[1]),
-        "速训练": float(parameters[6]),
-        "耐训练": float(parameters[7]),
-        "力训练": float(parameters[8]),
-        "根训练": float(parameters[9]) - 15,
-        "智训练": float(parameters[10]) - 30,
-        "SS训练": float(parameters[11]),
-        "休息": float(parameters[12]) - 50,
-        "友人出行": float(parameters[13]),
-        "单独出行": float(parameters[14]),
-        "比赛": float(parameters[15]),
-        "远征速": float(parameters[16]),
-        "远征耐": float(parameters[17]),
-        "远征力": float(parameters[18]),
-        "远征根": float(parameters[19]) - 25,
-        "远征智": float(parameters[20]) - 50,
-        "体速": float(parameters[26]),
-        "体耐": float(parameters[27]),
-        "体力": float(parameters[28]),
-        "体根": float(parameters[29]),
-        "体智": float(parameters[30]),
-        "远征体速": float(parameters[36]),
-        "远征体耐": float(parameters[37]),
-        "远征体力": float(parameters[38]),
-        "远征体根": float(parameters[39]) - 20,
-        "远征体智": float(parameters[40]) - 180,
+        "速训练": float(parameters[6]) + config["summer2_scores"]["速训练"],
+        "耐训练": float(parameters[7]) + config["summer2_scores"]["耐训练"],
+        "力训练": float(parameters[8]) + config["summer2_scores"]["力训练"],
+        "根训练": float(parameters[9]) + config["summer2_scores"]["根训练"],
+        "智训练": float(parameters[10]) + config["summer2_scores"]["智训练"],
+        "SS训练": float(parameters[11]) + config["summer2_scores"]["SS训练"],
+        "休息": float(parameters[12]) + config["summer2_scores"]["休息"],
+        "友人出行": float(parameters[13]) + config["summer2_scores"]["友人出行"],
+        "单独出行": float(parameters[14]) + config["summer2_scores"]["单独出行"],
+        "比赛": float(parameters[15]) + config["summer2_scores"]["比赛"],
+        "远征速": float(parameters[16]) + config["summer2_scores"].get("远征速", 0),
+        "远征耐": float(parameters[17]) + config["summer2_scores"].get("远征耐", 0),
+        "远征力": float(parameters[18]) + config["summer2_scores"].get("远征力", 0),
+        "远征根": float(parameters[19]) + config["summer2_scores"].get("远征根", 0),
+        "远征智": float(parameters[20]) + config["summer2_scores"].get("远征智", 0),
+        "体速": float(parameters[26]) + config["summer2_scores"].get("体速", 0),
+        "体耐": float(parameters[27]) + config["summer2_scores"].get("体耐", 0),
+        "体力": float(parameters[28]) + config["summer2_scores"].get("体力", 0),
+        "体根": float(parameters[29]) + config["summer2_scores"].get("体根", 0),
+        "体智": float(parameters[30]) + config["summer2_scores"].get("体智", 0),
+        "远征体速": float(parameters[36]) + config["summer2_scores"].get("远征体速", 0),
+        "远征体耐": float(parameters[37]) + config["summer2_scores"].get("远征体耐", 0),
+        "远征体力": float(parameters[38]) + config["summer2_scores"].get("远征体力", 0),
+        "远征体根": float(parameters[39]) + config["summer2_scores"].get("远征体根", 0),
+        "远征体智": float(parameters[40]) + config["summer2_scores"].get("远征体智", 0),
     }
-    
+
     current_round = int(scores["回合数"])
     best_action = max(scores, key=scores.get)
     print(f"当前回合: {current_round}, 建议操作: {best_action} (分数: {scores[best_action]})")
     return best_action
+
 
 def get_target_ports_once():
     """启动时一次性获取目标端口"""
@@ -431,7 +437,9 @@ def check_game_state():
             'lace_over2_img': cv2.imread('picture/17.png'),
             'lace_over3_img': cv2.imread('picture/18.png'),
             'lace_over4_img': cv2.imread('picture/19.png'),
-            'add_training_img': cv2.imread('picture/19.png')
+            'add_training_img': cv2.imread('picture/20.png'),
+            'lace_confirm_img': cv2.imread('picture/21.png'),
+            'lace_kaigai_confirm_img': cv2.imread('picture/22.png')
         }
 
         # 定义所有ROI
@@ -454,15 +462,21 @@ def check_game_state():
             'lace_over1_roi': screenshot[1130:1280, 360:720],
             'lace_over2_roi': screenshot[1205:1280, 0:720],
             'lace_over3_roi': screenshot[699:899, 0:720],
-            'add_training_roi': screenshot[235:285, 110:552]
+            'add_training_roi': screenshot[235:285, 110:552],
+            'lace_confirm_roi': screenshot[1038:1138, 1:511],
+            'lace_kaigai_confirm_roi': screenshot[1130:1230, 0:720]
         }
         
         if screenshot is not None:
             if current_round == 22 and match_template(rois['training_roi'], images['training_img']) and best_action is not None:
-                sleep(3)
                 perform_action("赛前点适性")
-                sleep(1)
-                perform_action("呼出赛程")
+                sleep(2)
+                if config["schedule_action"] == "呼出赛程二":
+                    perform_action("呼出赛程二")
+                elif config["schedule_action"] == "呼出赛程三":
+                    perform_action("呼出赛程三")
+                else:
+                    perform_action("呼出赛程一")
                 best_action = None
             elif current_round == 41 and match_template(rois['kaigai_training_roi'], images['kaigai_training_img']) and best_action is not None:
                 perform_action("友情适性")
@@ -493,7 +507,16 @@ def check_game_state():
                 rois['add_training_roi'] = screenshot[235:285, 110:552]
                 if match_template(rois['five_choice_one_roi'], images['five_choice_one_img']):
                     print("检测到五选一")
-                    perform_action("目标选择")
+                    if config["five_choice_one_action"] == "目标选择二":
+                        perform_action("目标选择二")
+                    elif config["five_choice_one_action"] == "目标选择三":
+                        perform_action("目标选择三")
+                    elif config["five_choice_one_action"] == "目标选择四":
+                        perform_action("目标选择四")
+                    elif config["five_choice_one_action"] == "目标选择五":
+                        perform_action("目标选择五")
+                    else:
+                        perform_action("呼出赛程一")
                 elif match_template(rois['greenhat_ask_roi'], images['greenhat_ask_img']) or (match_template(rois['event_choice_roi'], images['event_choice1_img']) and match_template(rois['none_roi'], images['none_img'])) or match_template(rois['add_training_roi'], images['add_training_img']):
                     print("检测到特殊事件")
                     perform_action("特殊事件选择")
@@ -535,12 +558,18 @@ def check_game_state():
                     print("检测到海外赛")
                     perform_action("海外赛")
             elif match_template(rois['before_lace_roi'], images['before_lace_img']):
-                if current_round in (39, 63):
-                    print("更改跑法")
-                    perform_action("跑法改先")
-                elif current_round == 43:
-                    print("更改跑法")
+                if current_round in config["run_styles"].get("逃", []):
+                    print("更改跑法逃")
                     perform_action("跑法改逃")
+                elif current_round in config["run_styles"].get("先", []):
+                    print("更改跑法先")
+                    perform_action("跑法改先")
+                elif current_round in config["run_styles"].get("差", []):
+                    print("更改跑法差")
+                    perform_action("跑法改差")
+                elif current_round in config["run_styles"].get("追", []):
+                    print("更改跑法追")
+                    perform_action("跑法改追")
                 print("开始比赛")
                 perform_action("开始比赛")
             elif match_template(rois['continue_roi'], images['continue_img']):
@@ -550,6 +579,12 @@ def check_game_state():
                 print("检测到出道失败，闹钟启动一次")
                 perform_action("用闹钟")
                 perform_action("比赛结束")
+            elif match_template(rois['lace_confirm_roi'], images['lace_confirm_img']):
+                print("检测到漏点确认")
+                perform_action("确认补")
+            elif match_template(rois['lace_kaigai_confirm_roi'], images['lace_kaigai_confirm_img']):
+                print("检测到漏点海外确认参赛")
+                perform_action("海外确认参赛补")
             elif match_template(rois['lace_over3_roi'], images['lace_over3_img']) or match_template(rois['lace_over2_roi'], images['lace_over2_img']) or match_template(rois['lace_over2_roi'], images['lace_over4_img']):
                 print("检测到比赛结束")
                 perform_action("比赛结束补")
