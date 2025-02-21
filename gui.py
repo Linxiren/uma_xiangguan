@@ -1,5 +1,11 @@
 import gradio as gr
 import json
+import os
+import sys
+
+def get_config_path():
+    """获取配置文件路径"""
+    return os.getenv('CONFIG_PATH', 'config.json')
 
 def save_config(
     adb_path, device_id, target_exe, schedule_action, five_choice_one_action,
@@ -23,13 +29,13 @@ def save_config(
             "追": list(map(int, run_style_chase.split(','))) if run_style_chase else [],
         }
     }
-    with open('config.json', 'w') as f:
-        json.dump(config, f)
+    with open(get_config_path(), 'w', encoding='utf-8') as f:
+        json.dump(config, f, ensure_ascii=False, indent=2)
     return "设置已保存"
 
 def load_config():
     try:
-        with open('config.json', 'r') as f:
+        with open(get_config_path(), 'r', encoding='utf-8') as f:
             config = json.load(f)
         return (
             config.get("ADB_PATH", ""),
@@ -128,3 +134,9 @@ with gr.Blocks() as demo:
     )
 
 demo.launch()
+
+def main():
+    demo.launch()
+
+if __name__ == '__main__':
+    main()
