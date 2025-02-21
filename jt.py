@@ -10,7 +10,10 @@ import threading
 import cv2
 import numpy as np
 
-with open('config.json', 'r') as f:
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+config_path = os.getenv('CONFIG_PATH', 'config.json')
+with open(config_path, 'r', encoding='utf-8') as f:
     config = json.load(f)
 
 # 雷电模拟器adb配置
@@ -417,29 +420,29 @@ def check_game_state():
         
         # 预加载所有图片
         images = {
-            'lace_lose_img': cv2.imread('picture/0.png'),
-            'event_choice_img': cv2.imread('picture/1.png'),
-            'event_choice1_img': cv2.imread('picture/13.png'),
-            'five_choice_one_img': cv2.imread('picture/2.png'),
-            'greenhat_ask_img': cv2.imread('picture/3.png'),
-            'lace_tips_img': cv2.imread('picture/4.png'),
-            'object_lace_img': cv2.imread('picture/5.png'),
-            'communicate_lace_img': cv2.imread('picture/6.png'),
-            'training_img': cv2.imread('picture/7.png'),
-            'kaigai_training_img': cv2.imread('picture/8.png'),
-            'beats_img': cv2.imread('picture/9.png'),
-            'trip_img': cv2.imread('picture/10.png'),
-            'none_img': cv2.imread('picture/11.png'),
-            'continue_img': cv2.imread('picture/12.png'),
-            'before_lace_img': cv2.imread('picture/14.png'),
-            'clock_img': cv2.imread('picture/15.png'),
-            'lace_over1_img': cv2.imread('picture/16.png'),
-            'lace_over2_img': cv2.imread('picture/17.png'),
-            'lace_over3_img': cv2.imread('picture/18.png'),
-            'lace_over4_img': cv2.imread('picture/19.png'),
-            'add_training_img': cv2.imread('picture/20.png'),
-            'lace_confirm_img': cv2.imread('picture/21.png'),
-            'lace_kaigai_confirm_img': cv2.imread('picture/22.png')
+            'lace_lose_img': cv2.imread(os.path.join(current_dir, 'picture/0.png')),
+            'event_choice_img': cv2.imread(os.path.join(current_dir, 'picture/1.png')),
+            'event_choice1_img': cv2.imread(os.path.join(current_dir, 'picture/13.png')),
+            'five_choice_one_img': cv2.imread(os.path.join(current_dir, 'picture/2.png')),
+            'greenhat_ask_img': cv2.imread(os.path.join(current_dir, 'picture/3.png')),
+            'lace_tips_img': cv2.imread(os.path.join(current_dir, 'picture/4.png')),
+            'object_lace_img': cv2.imread(os.path.join(current_dir, 'picture/5.png')),
+            'communicate_lace_img': cv2.imread(os.path.join(current_dir, 'picture/6.png')),
+            'training_img': cv2.imread(os.path.join(current_dir, 'picture/7.png')),
+            'kaigai_training_img': cv2.imread(os.path.join(current_dir, 'picture/8.png')),
+            'beats_img': cv2.imread(os.path.join(current_dir, 'picture/9.png')),
+            'trip_img': cv2.imread(os.path.join(current_dir, 'picture/10.png')),
+            'none_img': cv2.imread(os.path.join(current_dir, 'picture/11.png')),
+            'continue_img': cv2.imread(os.path.join(current_dir, 'picture/12.png')),
+            'before_lace_img': cv2.imread(os.path.join(current_dir, 'picture/14.png')),
+            'clock_img': cv2.imread(os.path.join(current_dir, 'picture/15.png')),
+            'lace_over1_img': cv2.imread(os.path.join(current_dir, 'picture/16.png')),
+            'lace_over2_img': cv2.imread(os.path.join(current_dir, 'picture/17.png')),
+            'lace_over3_img': cv2.imread(os.path.join(current_dir, 'picture/18.png')),
+            'lace_over4_img': cv2.imread(os.path.join(current_dir, 'picture/19.png')),
+            'add_training_img': cv2.imread(os.path.join(current_dir, 'picture/20.png')),
+            'lace_confirm_img': cv2.imread(os.path.join(current_dir, 'picture/21.png')),
+            'lace_kaigai_confirm_img': cv2.imread(os.path.join(current_dir, 'picture/22.png'))
         }
 
         # 定义所有ROI
