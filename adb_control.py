@@ -22,7 +22,8 @@ def run_adb_commands(adb_path):
 
 if __name__ == "__main__":
     # 从配置文件中读取 ADB_PATH
-    with open('config.json', 'r') as f:
+    config_path = os.getenv('CONFIG_PATH', 'config.json')
+    with open(config_path, 'r', encoding='utf-8') as f:
         config = json.load(f)
     adb_path = config["ADB_PATH"]
     
