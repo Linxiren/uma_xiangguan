@@ -1,0 +1,991 @@
+名称,代码,类型,数值,持续时间
+順時針◎,rotation==1,被动（速度）,60,始终
+順時針○,rotation==1,被动（速度）,40,始终
+順時針×,rotation==1,被动（速度）,-40,始终
+逆時針◎,rotation==2,被动（速度）,60,始终
+逆時針○,rotation==2,被动（速度）,40,始终
+逆時針×,rotation==2,被动（速度）,-40,始终
+東京賽場◎,track_id==10006,被动（耐力）,60,始终
+東京賽場○,track_id==10006,被动（耐力）,40,始终
+東京賽場×,track_id==10006,被动（耐力）,-40,始终
+中山賽場◎,track_id==10005,被动（耐力）,60,始终
+中山賽場○,track_id==10005,被动（耐力）,40,始终
+中山賽場×,track_id==10005,被动（耐力）,-40,始终
+阪神賽場◎,track_id==10009,被动（耐力）,60,始终
+阪神賽場○,track_id==10009,被动（耐力）,40,始终
+阪神賽場×,track_id==10009,被动（耐力）,-40,始终
+京都賽場◎,track_id==10008,被动（耐力）,60,始终
+京都賽場○,track_id==10008,被动（耐力）,40,始终
+京都賽場×,track_id==10008,被动（耐力）,-40,始终
+中京賽場◎,track_id==10007,被动（耐力）,60,始终
+中京賽場○,track_id==10007,被动（耐力）,40,始终
+中京賽場×,track_id==10007,被动（耐力）,-40,始终
+札幌賽場◎,track_id==10001,被动（耐力）,60,始终
+札幌賽場○,track_id==10001,被动（耐力）,40,始终
+札幌賽場×,track_id==10001,被动（耐力）,-40,始终
+函館賽場◎,track_id==10002,被动（耐力）,60,始终
+函館賽場○,track_id==10002,被动（耐力）,40,始终
+函館賽場×,track_id==10002,被动（耐力）,-40,始终
+福島賽場◎,track_id==10004,被动（耐力）,60,始终
+福島賽場○,track_id==10004,被动（耐力）,40,始终
+福島賽場×,track_id==10004,被动（耐力）,-40,始终
+新潟賽場◎,track_id==10003,被动（耐力）,60,始终
+新潟賽場○,track_id==10003,被动（耐力）,40,始终
+新潟賽場×,track_id==10003,被动（耐力）,-40,始终
+小倉賽場◎,track_id==10010,被动（耐力）,60,始终
+小倉賽場○,track_id==10010,被动（耐力）,40,始终
+小倉賽場×,track_id==10010,被动（耐力）,-40,始终
+主要距離◎,is_basis_distance==1,被动（耐力）,60,始终
+主要距離○,is_basis_distance==1,被动（耐力）,40,始终
+主要距離×,is_basis_distance==1,被动（耐力）,-40,始终
+非主要距離◎,is_basis_distance==0,被动（耐力）,60,始终
+非主要距離○,is_basis_distance==0,被动（耐力）,40,始终
+非主要距離×,is_basis_distance==0,被动（耐力）,-40,始终
+良好場地◎,ground_condition==1,被动（力量）,60,始终
+良好場地○,ground_condition==1,被动（力量）,40,始终
+良好場地×,ground_condition==1,被动（力量）,-40,始终
+路況差勁◎,ground_condition==2 @ground_condition==3 @ground_condition==4,被动（力量）,60,始终
+路況差勁○,ground_condition==2 @ground_condition==3 @ground_condition==4,被动（力量）,40,始终
+路況差勁×,ground_condition==2 @ground_condition==3 @ground_condition==4,被动（力量）,-40,始终
+春賽馬娘◎,season==1 @season==5,被动（速度）,60,始终
+春賽馬娘○,season==1 @season==5,被动（速度）,40,始终
+春賽馬娘×,season==1 @season==5,被动（速度）,-40,始终
+夏賽馬娘◎,season==2,被动（速度）,60,始终
+夏賽馬娘○,season==2,被动（速度）,40,始终
+夏賽馬娘×,season==2,被动（速度）,-40,始终
+秋賽馬娘◎,season==3,被动（速度）,60,始终
+秋賽馬娘○,season==3,被动（速度）,40,始终
+秋賽馬娘×,season==3,被动（速度）,-40,始终
+冬賽馬娘◎,season==4,被动（速度）,60,始终
+冬賽馬娘○,season==4,被动（速度）,40,始终
+冬賽馬娘×,season==4,被动（速度）,-40,始终
+晴天◎,weather==1,被动（毅力）,60,始终
+晴天○,weather==1,被动（毅力）,40,始终
+陰天◎,weather==2,被动（毅力）,60,始终
+陰天○,weather==2,被动（毅力）,40,始终
+下雨天◎,weather==3,被动（毅力）,60,始终
+下雨天○,weather==3,被动（毅力）,40,始终
+下雨天×,weather==3,被动（毅力）,-40,始终
+下雪天◎,weather==4,被动（毅力）,60,始终
+下雪天○,weather==4,被动（毅力）,40,始终
+擅長內側閘位◎,post_number<=3,被动（智力）,60,始终
+擅長內側閘位○,post_number<=3,被动（智力）,40,始终
+不擅長內側閘位,post_number<=3,被动（智力）,-40,始终
+擅長外側閘位◎,post_number>=6,被动（速度）,60,始终
+擅長外側閘位○,post_number>=6,被动（速度）,40,始终
+不擅長外側閘位,post_number>=6,被动（速度）,-40,始终
+喜歡獨處◎,running_style_count_same<=1,被动（速度）,80,始终
+喜歡獨處○,running_style_count_same<=1,被动（速度）,60,始终
+對抗意識◎,running_style_count_same_rate>=40,被动（力量）,60,始终
+對抗意識○,running_style_count_same_rate>=40,被动（力量）,40,始终
+內向保守,running_style_count_same_rate>=40,被动（力量）,-40,始终
+徹底鎖定◎,running_style_equal_popularity_one==1,被动（毅力）,60,始终
+徹底鎖定○,running_style_equal_popularity_one==1,被动（毅力）,40,始终
+伏兵◎,popularity>=4,被动（速度）,60,始终
+伏兵○,popularity>=4,被动（速度）,40,始终
+不擅長GⅠ,grade==100,被动（速度）,-40,始终
+膽小,popularity==1,被动（耐力）,-40,始终
+弧線的教授,all_corner_random==1,速度,0.35,2.4
+彎道靈巧○,all_corner_random==1,速度,0.15,2.4
+彎道靈巧×,all_corner_random==1,速度,-0.2,2.4
+曲線的侍酒師,all_corner_random==1,加速度,0.4,3
+彎道加速○,all_corner_random==1,加速度,0.2,3
+彎道加速×,all_corner_random==1,加速度,-0.2,3
+圓弧的藝術家,corner_random==1 @corner_random==2 @corner_random==3 @corner_random==4,耐力恢复,0.055,瞬时
+彎道回復○,corner_random==1 @corner_random==2 @corner_random==3 @corner_random==4,耐力恢复,0.015,瞬时
+彎道回復×,corner_random==1 @corner_random==2 @corner_random==3 @corner_random==4,耐力恢复,-0.02,瞬时
+疾風一文字,straight_random==1,速度,0.35,3
+直線靈巧,straight_random==1,速度,0.15,3
+快如陣風,straight_random==1,加速度、速度,0.4、0.15,3
+直線加速,straight_random==1,加速度,0.2,3
+好轉歇息,phase==1 &corner==0,耐力恢复,0.055,瞬时
+直線回復,phase==1 &corner==0,耐力恢复,0.015,瞬时
+不擅長上坡,up_slope_random==1,耐力恢复,-0.02,瞬时
+討厭成群,accumulatetime>=2 &is_surrounded==1,耐力恢复,-0.02,瞬时
+習慣放棄,last_straight_random==1 &distance_diff_rate>=75,速度,-0.2,3
+習慣偷懶,remain_distance==200 &order==1 &bashin_diff_behind>=1,速度,-0.2,3
+全神貫注,always==1,出闸,0.4,瞬时
+集中力,always==1,出闸,0.9,瞬时
+閘門障礙,always==1,出闸,1.5,瞬时
+鋼鐵意志,phase<=1 &accumulatetime>=5 &blocked_front_continuetime>=1,耐力恢复、横向速度,0.055、0.035,2
+隱藏身影,phase<=1 &accumulatetime>=5 &blocked_front_continuetime>=1,耐力恢复、横向速度,0.015、0.015,2
+矚目的舞者,phase_random==0,横向速度,0.045,3
+取位天賦,phase_random==0,横向速度,0.035,3
+追上去！,phase==1 &change_order_onetime<0,速度,0.35,1.8
+加速步調,phase==1 &change_order_onetime<0,速度,0.15,1.8
+不屈之心,phase==1 &change_order_onetime>0,耐力恢复,0.055,瞬时
+維持步調,phase==1 &change_order_onetime>0,耐力恢复,0.015,瞬时
+充耳不聞,phase==1 &is_surrounded==1,耐力恢复,0.055,瞬时
+混戰冷靜,phase==1 &is_surrounded==1,耐力恢复,0.015,瞬时
+不停頓女孩,infront_near_lane_time>=1 &is_lastspurt==1 &hp_per>=1,加速度、横向速度,0.4、0.025,3
+避開力竭賽馬娘,infront_near_lane_time>=1 &is_lastspurt==1 &hp_per>=1,加速度、横向速度,0.2、0.005,3
+跑道的魔術師,phase_random==2,横向速度,0.035,3
+臨機應變,phase_random==2,横向速度,0.025,3
+全心全力,is_lastspurt==1 &phase_firsthalf_random==3,速度,0.35,2.4
+尾段加速,is_lastspurt==1 &phase_firsthalf_random==3,速度,0.15,2.4
+空轉,accumulatetime>=2 &order==1 &bashin_diff_behind>=1,耐力恢复,-0.02,瞬时
+先發必勝,running_style==1 &phase==0,加速度,0.4,1.2
+先鋒,running_style==1 &phase==0,加速度,0.2,1.2
+逃脫術,running_style==1 &phase_random==1 &order_rate<=50,速度,0.35,3
+疾行,running_style==1 &phase_random==1 &order_rate<=50,速度,0.15,3
+逃亡者,running_style==1 &is_finalcorner_random==1 &order==1,加速度,0.4,3
+準備強行衝線,running_style==1 &is_finalcorner_random==1 &order==1,加速度,0.2,3
+綽綽有餘,running_style==2 &phase_laterhalf_random==0 &order_rate<=50,耐力恢复,0.055,瞬时
+維持持久力,running_style==2 &phase_laterhalf_random==0 &order_rate<=50,耐力恢复,0.015,瞬时
+賽場規劃師,running_style==2 &phase_random==1 &order_rate<=50,耐力恢复,0.055,瞬时
+好位追趕,running_style==2 &phase_random==1 &order_rate<=50,耐力恢复,0.015,瞬时
+速度之星,running_style==2 &is_finalcorner_random==1 &order_rate<=50,速度,0.35,1.8
+準備突圍,running_style==2 &is_finalcorner_random==1 &order_rate<=50,速度,0.15,1.8
+迅速果斷,running_style==3 &phase_random==1 &order_rate>=40,速度,0.35,2.4
+前驅取位,running_style==3 &phase_random==1 &order_rate>=40,速度,0.15,2.4
+熟練轉換,running_style==3 &phase_firsthalf_random==2 &order_rate>=40,加速度,0.4,1.8
+居中超前姿勢,running_style==3 &phase_firsthalf_random==2 &order_rate>=40,加速度,0.2,1.8
+昇龍,running_style==3 &is_finalcorner==1 &corner!=0 &is_behind_in==1 &change_order_onetime<0,速度,0.35,3
+準備外側超前,running_style==3 &is_finalcorner==1 &corner!=0 &is_behind_in==1 &change_order_onetime<0,速度,0.15,3
+沉睡的獅子,running_style==4 &phase_random==1 &distance_diff_rate>=75,耐力恢复,0.055,瞬时
+後方待機,running_style==4 &phase_random==1 &distance_diff_rate>=75,耐力恢复,0.015,瞬时
+疾風怒濤,phase==2 &distance_diff_rate>=50,速度,0.35,3
+進攻時機超群,phase==2 &distance_diff_rate>=50,速度,0.15,3
+逼近的身影,running_style==4 &is_lastspurt==1 &corner==0,加速度,0.4,0.9
+直線一口氣,running_style==4 &is_lastspurt==1 &corner==0,加速度,0.2,0.9
+短途渦輪,distance_type==1 &phase_random==2,加速度,0.4,3
+短途檔位,distance_type==1 &phase_random==2,加速度,0.2,3
+靜觀其變,distance_type==1 &phase_random==1 &order_rate>50,耐力恢复、加速度,0.015、0.1,3
+電擊光輝,distance_type==1 &phase_random==2 &order_rate>50,速度、加速度,0.35、0.1,3
+窮追不捨,distance_type==1 &phase_random==2 &order_rate>50,速度、加速度,0.15、0.05,3
+一哩支配者,distance_type==2 &phase_laterhalf_random==0 &order_rate<=50,速度,0.35,3
+積極應對,distance_type==2 &phase_laterhalf_random==0 &order_rate<=50,速度,0.15,3
+慧眼,distance_type==2 &phase_laterhalf_random==0 &order_rate>50,耐力恢复、妨害（速度）,0.055、-0.2,3
+觀察情勢,distance_type==2 &phase_laterhalf_random==0 &order_rate>50,耐力恢复、妨害（速度）,0.015、-0.05,3
+強勁腳力,distance_type==2 &phase_random==2 &order_rate>50,加速度,0.4,3
+上昇氣流,distance_type==2 &phase_random==2 &order_rate>50,加速度,0.2,3
+突破者,distance_type==3 &phase_random==1 &order<=3,耐力恢复,0.055,瞬时
+前途無量,distance_type==3 &phase_random==1 &order<=3,耐力恢复,0.015,瞬时
+致勝曲調,distance_type==3 &phase_random==1 &order_rate<=50,速度,0.35,2.4
+加快節奏,distance_type==3 &phase_random==1 &order_rate<=50,速度,0.15,2.4
+對勝利的執著,distance_type==3 &is_finalcorner==1 &overtake_target_time>=2,速度、加速度,0.35、0.1,3
+緊咬不放,distance_type==3 &is_finalcorner==1 &overtake_target_time>=2,速度、加速度,0.15、0.05,3
+冷卻,distance_type==4 &phase_random==1,耐力恢复,0.055,瞬时
+深呼吸,distance_type==4 &phase_random==1,耐力恢复,0.015,瞬时
+內在體驗,distance_type==4 &is_finalcorner==1 &corner!=0 &lane_type==0,速度,0.35,3
+內側強者,distance_type==4 &is_finalcorner==1 &corner!=0 &lane_type==0,速度,0.15,3
+腎上腺素爆發,distance_type==4 &hp_per<=30,耐力恢复、速度,0.055、0.35,1.8
+第二體力條,distance_type==4 &hp_per<=30,耐力恢复,0.015,瞬时
+謀略（前）,phase==1 &order_rate<=50 &temptation_opponent_count_behind>=1,妨害（耐力恢复）,-0.01,瞬时
+謀略（後）,phase==1 &order_rate>50 &temptation_opponent_count_infront>=1,妨害（耐力恢复）,-0.01,瞬时
+對領頭策略,running_style_temptation_opponent_count_nige>=1 &is_temptation==0,心态,5,瞬时
+對前列策略,running_style_temptation_opponent_count_senko>=1 &is_temptation==0,心态,5,瞬时
+對居中策略,running_style_temptation_opponent_count_sashi>=1 &is_temptation==0,心态,5,瞬时
+對後追策略,running_style_temptation_opponent_count_oikomi>=1 &is_temptation==0,心态,5,瞬时
+牽制領頭,running_style_count_nige_otherself>=1 &phase_random==0 &accumulatetime>=5,妨害（耐力恢复）,-0.01,瞬时
+使領頭焦躁,running_style_count_nige_otherself>=1 &phase_random==1,妨害（耐力恢复）,-0.01,瞬时
+使領頭遲疑,running_style_count_nige_otherself>=1 &phase_random==2,妨害（速度）,-0.15,3
+牽制前列,running_style_count_senko_otherself>=1 &phase_random==0 &accumulatetime>=5,妨害（耐力恢复）,-0.01,瞬时
+使前列焦躁,running_style_count_senko_otherself>=1 &phase_random==1,妨害（耐力恢复）,-0.01,瞬时
+使前列遲疑,running_style_count_senko_otherself>=1 &phase_random==2,妨害（速度）,-0.15,3
+牽制居中,running_style_count_sashi_otherself>=1 &phase_random==0 &accumulatetime>=5,妨害（耐力恢复）,-0.01,瞬时
+使居中焦躁,running_style_count_sashi_otherself>=1 &phase_random==1,妨害（耐力恢复）,-0.01,瞬时
+使居中遲疑,running_style_count_sashi_otherself>=1 &phase_random==2,妨害（速度）,-0.15,3
+牽制後追,running_style_count_oikomi_otherself>=1 &phase_random==0 &accumulatetime>=5,妨害（耐力恢复）,-0.01,瞬时
+使後追焦躁,running_style_count_oikomi_otherself>=1 &phase_random==1,妨害（耐力恢复）,-0.01,瞬时
+使後追遲疑,running_style_count_oikomi_otherself>=1 &phase_random==2,妨害（速度）,-0.15,3
+大井賽場◎,track_id==10101,被动（耐力）,60,始终
+大井賽場○,track_id==10101,被动（耐力）,40,始终
+大井賽場×,track_id==10101,被动（耐力）,-40,始终
+短距離直線◎,distance_type==1 &straight_random==1,速度,0.25,3
+短距離直線○,distance_type==1 &straight_random==1,速度,0.15,3
+短距離彎道◎,distance_type==1 &all_corner_random==1,速度,0.25,3
+短距離彎道○,distance_type==1 &all_corner_random==1,速度,0.15,3
+壓倒性領先,distance_type==1 &phase==1 &bashin_diff_behind>=3 &order==1,速度,0.35,3
+大幅領先,distance_type==1 &phase==1 &bashin_diff_behind>=3 &order==1,速度,0.15,3
+X計劃,distance_type==1 &phase_laterhalf_random==1 &order>=2 &order_rate<=50,加速度,0.4,3
+善後策略,distance_type==1 &phase_laterhalf_random==1 &order>=2 &order_rate<=50,加速度,0.2,3
+準備萬全！,distance_type==1 &phase_random==1,横向速度、加速度,0.035、0.3,4
+準備進攻,distance_type==1 &phase_random==1,横向速度、加速度,0.025、0.2,4
+緊盯後方,distance_type==1 &phase_random==0 &order_rate<=50 &accumulatetime>=5,妨害（速度）,-0.2,3
+逃亡禁令,distance_type==1 &phase_random==0 &order_rate>50 &accumulatetime>=5,妨害（耐力恢复）、妨害（加速度）,-0.03、-0.2,1.2
+禁止搶先,distance_type==1 &phase_random==0 &order_rate>50 &accumulatetime>=5,妨害（耐力恢复）、妨害（加速度）,-0.01、-0.05,1.2
+一哩直線◎,distance_type==2 &straight_random==1,速度,0.25,3
+一哩直線○,distance_type==2 &straight_random==1,速度,0.15,3
+一哩彎道◎,distance_type==2 &all_corner_random==1,速度,0.25,3
+一哩彎道○,distance_type==2 &all_corner_random==1,速度,0.15,3
+換檔,distance_type==2 &phase_random==1 &order_rate<=50,速度,0.35,2.4
+變速,distance_type==2 &phase_random==1 &order_rate<=50,速度,0.15,2.4
+油門全開！,distance_type==2 &distance_rate>=50 &change_order_onetime<0,加速度,0.4,3
+加速度,distance_type==2 &distance_rate>=50 &change_order_onetime<0,加速度,0.2,3
+姐姐氣質,distance_type==2 &is_overtake==1 &accumulatetime>=5,速度,0.35,2.4
+不服輸,distance_type==2 &is_overtake==1 &accumulatetime>=5,速度,0.15,2.4
+速度貪食者,distance_type==2 &phase_random==1 &order<=3,妨害（速度）、速度,-0.2、0.25,3
+速度吞噬者,distance_type==2 &phase_random==1 &order<=3,妨害（速度）、速度,-0.15、0.15,3
+布陣,distance_type==2 &phase_random==0 &order_rate>50 &accumulatetime>=3,妨害（加速度）,-0.3,3
+布局,distance_type==2 &phase_random==0 &order_rate>50 &accumulatetime>=3,妨害（加速度）,-0.1,3
+中距離直線◎,distance_type==3 &straight_random==1,速度,0.25,3
+中距離直線○,distance_type==3 &straight_random==1,速度,0.15,3
+中距離彎道◎,distance_type==3 &all_corner_random==1,速度,0.25,3
+中距離彎道○,distance_type==3 &all_corner_random==1,速度,0.15,3
+千里眼,distance_type==3 &phase_random==0,视野,15,3
+鷹眼,distance_type==3 &phase_random==0,视野,10,3
+閃光步伐,distance_type==3 &phase_random==1,横向速度、加速度,0.035、0.3,4
+閃電步伐,distance_type==3 &phase_random==1,横向速度、加速度,0.025、0.2,4
+神技步伐,distance_type==3 &is_move_lane==1 &accumulatetime>=10 @distance_type==3 &is_move_lane==2 &accumulatetime>=10,耐力恢复,0.055,瞬时
+輕快步伐,distance_type==3 &is_move_lane==1 &accumulatetime>=10 @distance_type==3 &is_move_lane==2 &accumulatetime>=10,耐力恢复,0.015,瞬时
+獨佔力,distance_type==3 &phase_random==2 &order_rate>50,妨害（速度）,-0.25,3
+束縛,distance_type==3 &phase_random==2 &order_rate>50,妨害（速度）,-0.15,3
+魅惑的細語,distance_type==3 &phase==1 &blocked_front_continuetime>=1,妨害（耐力恢复）,-0.03,瞬时
+細語,distance_type==3 &phase==1 &blocked_front_continuetime>=1,妨害（耐力恢复）,-0.01,瞬时
+長距離直線◎,distance_type==4 &straight_random==1,速度,0.25,3
+長距離直線○,distance_type==4 &straight_random==1,速度,0.15,3
+長距離彎道◎,distance_type==4 &all_corner_random==1,速度,0.25,3
+長距離彎道○,distance_type==4 &all_corner_random==1,速度,0.15,3
+前鋒的心得,distance_type==4 &phase_random==1 &bashin_diff_behind>=1 &order==1,速度,0.35,3
+維持領先,distance_type==4 &phase_random==1 &bashin_diff_behind>=1 &order==1,速度,0.15,3
+熟練超越,distance_type==4 &is_overtake==1 &accumulatetime>=5,耐力恢复,0.015,瞬时
+怒濤的後來居上,distance_type==4 &phase==2 &change_order_onetime<0,速度、加速度,0.35、0.1,3
+後來居上,distance_type==4 &phase==2 &change_order_onetime<0,速度、加速度,0.15、0.05,3
+持久力貪食者,distance_type==4 &phase_random==1 &order>=5,妨害（耐力恢复）、耐力恢复,-0.01、0.035,瞬时
+持久力吞噬者,distance_type==4 &phase_random==1 &order>=5,妨害（耐力恢复）、耐力恢复,-0.005、0.015,瞬时
+奇術師,distance_type==4 &phase_random==2,妨害（视野）,-10,3
+障眼法,distance_type==4 &phase_random==2,妨害（视野）,-5,3
+領頭直線◎,running_style==1 &straight_random==1,速度,0.25,3
+領頭直線○,running_style==1 &straight_random==1,速度,0.15,3
+領頭彎道◎,running_style==1 &all_corner_random==1,速度,0.25,3
+領頭彎道○,running_style==1 &all_corner_random==1,速度,0.15,3
+迴避危險,running_style==1 &phase==0 &blocked_front_continuetime>=1 @running_style==1 &phase==0 &blocked_side_continuetime>=1,横向速度、切换跑道,0.025、0.5,3
+領先的自尊,running_style==1 &phase<=1 &change_order_onetime>0 &accumulatetime>=5 @running_style==1 &phase<=1 &blocked_side_continuetime>=2 &accumulatetime>=5,速度,0.15,3
+強悍賽馬娘,running_style==1 &slope==1 &accumulatetime>=10,耐力恢复,0.055,瞬时
+隨勢而動,running_style==1 &slope==1 &accumulatetime>=10,耐力恢复,0.015,瞬时
+再次燃燒,running_style==1 &phase_random==2,加速度、耐力恢复,0.4、-0.02,3
+第二對策,running_style==1 &phase_random==2,加速度、耐力恢复,0.2、-0.02,3
+重新開始,running_style==1 &phase_random==0 &order>=2 &accumulatetime>=5,妨害（加速度）,-0.1,3
+前列直線◎,running_style==2 &straight_random==1,速度,0.25,3
+前列直線○,running_style==2 &straight_random==1,速度,0.15,3
+前列彎道◎,running_style==2 &all_corner_random==1,速度,0.25,3
+前列彎道○,running_style==2 &all_corner_random==1,速度,0.15,3
+技巧派,running_style==2 &is_move_lane==1 @running_style==2 &is_move_lane==2,加速度,0.3,3
+靈巧步伐,running_style==2 &is_move_lane==1 @running_style==2 &is_move_lane==2,加速度,0.2,3
+決心的直線滑下,running_style==2 &down_slope_random==1,加速度,0.3,3
+直線滑下,running_style==2 &down_slope_random==1,加速度,0.2,3
+貪吃鬼,running_style==2 &phase_random==1,耐力恢复,0.055,瞬时
+補充營養,running_style==2 &phase_random==1,耐力恢复,0.015,瞬时
+不屈精神,running_style==2 &phase_random==1 &order_rate>40,加速度,0.3,3
+重整態勢,running_style==2 &phase_random==1 &order_rate>40,加速度,0.2,3
+幻覺干擾,running_style==2 &phase_random==2 &order_rate<=50,妨害（视野）,-5,3
+干擾,running_style==2 &phase_random==2 &order_rate<=50,妨害（视野）,-3,3
+居中直線◎,running_style==3 &straight_random==1,速度,0.25,3
+居中直線○,running_style==3 &straight_random==1,速度,0.15,3
+居中彎道◎,running_style==3 &all_corner_random==1,速度,0.25,3
+居中彎道○,running_style==3 &all_corner_random==1,速度,0.15,3
+奮發圖強,running_style==3 &is_overtake==1 &accumulatetime>=5,加速度,0.3,4
+努力不懈,running_style==3 &is_overtake==1 &accumulatetime>=5,加速度,0.2,4
+百萬衝勁,running_style==3 &up_slope_random==1,速度,0.35,2.4
+十萬衝勁,running_style==3 &up_slope_random==1,速度,0.15,2.4
+放鬆,running_style==3 &phase_random==1 &order_rate>=40,耐力恢复,0.055,瞬时
+稍微休息,running_style==3 &phase_random==1 &order_rate>=40,耐力恢复,0.015,瞬时
+大局觀,running_style==3 &phase_random==1,视野,15,3
+解讀力,running_style==3 &phase_random==1,视野,5,3
+緊盯八方,running_style==3 &phase_random==2 &order_rate>50,妨害（耐力恢复）,-0.03,瞬时
+銳利眼光,running_style==3 &phase_random==2 &order_rate>50,妨害（耐力恢复）,-0.01,瞬时
+後追直線◎,running_style==4 &straight_random==1,速度,0.25,3
+後追直線○,running_style==4 &straight_random==1,速度,0.15,3
+後追彎道◎,running_style==4 &all_corner_random==1,速度,0.25,3
+後追彎道○,running_style==4 &all_corner_random==1,速度,0.15,3
+視線良好！沒有異狀！,running_style==4 &is_move_lane==1 @running_style==4 &is_move_lane==2,视野,10,3
+看穿,running_style==4 &is_move_lane==1 @running_style==4 &is_move_lane==2,视野,5,3
+放學後的專家,running_style==4 &slope==2 &accumulatetime>=10,耐力恢复,0.055,瞬时
+放學的樂趣,running_style==4 &slope==2 &accumulatetime>=10,耐力恢复,0.015,瞬时
+沉著冷靜,running_style==4 &infront_near_lane_time>=1 &accumulatetime>=10,耐力恢复,0.055,瞬时
+冷靜,running_style==4 &infront_near_lane_time>=1 &accumulatetime>=10,耐力恢复,0.015,瞬时
+天命士,running_style==4 &phase_random==2 &order_rate>50,视野,15,3
+策士,running_style==4 &phase_random==2 &order_rate>50,视野,5,3
+熱情凝視,running_style==4 &phase_random==2 &order>=2,妨害（速度）,-0.25,3
+凝視,running_style==4 &phase_random==2 &order>=2,妨害（速度）,-0.15,3
+領頭的訣竅◎,running_style==1,被动（智力）、视野,60、10,始终
+領頭的訣竅○,running_style==1,被动（智力）、视野,40、5,始终
+前列的訣竅◎,running_style==2,被动（智力）、视野,60、10,始终
+前列的訣竅○,running_style==2,被动（智力）、视野,40、5,始终
+居中的訣竅◎,running_style==3,被动（智力）、视野,60、10,始终
+居中的訣竅○,running_style==3,被动（智力）、视野,40、5,始终
+後追的訣竅◎,running_style==4,被动（智力）、视野,60、10,始终
+後追的訣竅○,running_style==4,被动（智力）、视野,40、5,始终
+超級幸運7,random_lot==50 &post_number==7,被动（速度）、被动（耐力）、被动（力量）,60、60、60,始终
+幸運7,random_lot==50 &post_number==7,被动（速度）、被动（耐力）、被动（力量）,40、40、40,始终
+777,remain_distance<=778 &remain_distance>=776,耐力恢复,0.015,瞬时
+登山家,up_slope_random==1,加速度,0.2,3
+喜愛賽馬娘,near_count>=3 &accumulatetime>=5,速度,0.15,3
+打好基礎,activate_count_start>=3,加速度,0.2,3
+豎起尾巴,activate_count_middle>=3,速度,0.15,3
+使盡全力,activate_count_end_after>=3,耐力恢复,0.015,瞬时
+同理心,same_skill_horse_count>=5,被动（速度）,40,始终
+獨行俠,same_skill_horse_count==1,被动（速度）,40,始终
+滑流,infront_near_lane_time>=3 &accumulatetime>=10,速度,0.15,3
+遊戲到此為止了！,behind_near_lane_time>=3 &accumulatetime>=10,速度,0.15,3
+逐夢之星,phase>=2 &order>=1 &order_rate<=50 &change_order_onetime<0,即时速度、加速度,0.15、0.05,3
+不會讓出領先的景色……！,distance_rate>=50 &order==1 &bashin_diff_behind>=1,速度,0.15,3
+終極帝皇舞步,phase>=2 &order<=3 &bashin_diff_infront<=1 &is_overtake==1,速度,0.25,3
+紅焰檔位/LP1211-M,is_finalcorner==1 &order<=5 &order_rate<=50,加速度,0.2,2.4
+勝利的躍動,order>=2 &order<=5 &order_rate<=50 &remain_distance<=201 &remain_distance>=199,速度,0.25,3
+不沉戰艦起錨！,distance_rate>=50 &distance_rate<=60 &order_rate>50,速度,0.05,3.6
+CUTTING×DRIVE！,order>=3 &order_rate<=50 &remain_distance<=200 &bashin_diff_infront<=1 @order>=3 &order_rate<=50 &remain_distance<=200 &bashin_diff_behind<=1,速度,0.15,3
+燦爛．赤色王牌,distance_rate>=50 &order==1 &bashin_diff_behind<=1 @distance_rate>=50 &order==2 &is_overtake==1,速度、加速度,0.05、0.1,3
+VICTORY SHOT！,is_finalcorner_laterhalf==1 &corner!=0 &order>=3 &order_rate<=40,加速度,0.2,3
+精誠所至金石為開,is_last_straight==1 &change_order_onetime<0 &order>=3,速度,0.15,3
+必須貫徹高貴的使命,"条件1: is_finalcorner==1 &corner!=0 &distance_diff_rate<=30 &distance_type==4 &lastspurt==2
+条件2: is_finalcorner==1 &corner!=0 &distance_diff_rate<=30","条件1: 速度
+条件2: 速度","条件1: 0.25
+条件2: 0.15","条件1: 3
+条件2: 3"
+勝利者☆飛身撲,is_last_straight==1 &hp_per>=30 &order<=2,速度、加速度,0.05、0.1,3
+獻給勝利女神的舞蹈,is_finalcorner==1 &bashin_diff_behind<=1 &order<=4 @is_finalcorner==1 &bashin_diff_infront<=1 &order<=4,速度,0.15,3
+讓你見識皇帝的威勢吧,is_last_straight==1 &change_order_up_end_after>=3,速度,0.25,3
+自尊之炎,is_finalcorner==1 &corner!=0 &order>=3 &change_order_onetime<0,速度,0.15,3
+∴win Q.E.D.,"条件1: phase>=2 &is_finalcorner==1 &order<=4 &temptation_count==0
+条件2: phase>=2 &is_finalcorner==1 &order<=4","条件1: 速度
+条件2: 速度","条件1: 0.25
+条件2: 0.15","条件1: 3
+条件2: 3"
+閃耀☆著陸,is_finalcorner==1 &blocked_side_continuetime>=2 &order<=3,速度、加速度,0.05、0.1,3
+G00 1st.F∞;,"条件1: is_badstart==0 &order<=3 &is_last_straight==1 &order_rate_in20_continue==1
+条件2: is_badstart==0 &order<=3 &is_last_straight==1","条件1: 速度
+条件2: 速度","条件1: 0.25
+条件2: 0.15","条件1: 3
+条件2: 3"
+合成代謝開始！,phase>=2 &corner!=0 &order_rate>=65 &order_rate<=70,加速度,0.2,2.4
+藍薔薇追擊者,phase>=2 &order<=4 &change_order_onetime<0,速度,0.15,3
+U=ma2,distance_rate>=50 &corner!=0 &order>=3 &order_rate<=40,耐力恢复、速度,0.015、0.05,2.4
+將勝利的獎券獻給你！,is_finalcorner==1 &blocked_side_continuetime>=2,速度,0.15,3
+模範生×驀進＝大獲全勝,distance_rate>=50 &order<=3 &blocked_side_continuetime>=2,速度,0.15,3
+純潔之心,phase_random==1 &order>=2 &order_rate<=40,耐力恢复,0.035,瞬时
+雀躍不已的精彩時刻,is_finalcorner==1 &corner!=0 &order_rate>50 &near_count>=1,耐力恢复,0.015,瞬时
+顯靈了要顯靈了請顯靈吧！,phase>=2 &order>=3 &blocked_front==1,速度、加速度,0.15、0.05,3
+一定能抵達前方……！,phase>=2 &order==3 &bashin_diff_behind<=1,速度,0.15,3
+Pride of KING,temptation_count==0 &remain_distance<=201 &remain_distance>=199 &order>=4 &order_rate<=70,速度,0.25,3
+魅惑術,distance_type==1 &phase_random==0 &order_rate<=50 &accumulatetime>=5,妨害（速度）,-0.25,3
+精選推薦,ground_type==2 &phase==1 &blocked_side_continuetime>=2,速度,0.15,2.4
+排行驟升！,ground_type==2 &phase==1 &blocked_side_continuetime>=2,速度,0.35,2.4
+第六感,running_style==1 &phase==0 &blocked_front_continuetime>=1 @running_style==1 &phase==0 &blocked_side_continuetime>=1,横向速度、切换跑道,0.035、0.5,3
+Shadow Break,条件1前置: phase==1 &blocked_side_continuetime>=2,"条件1: 速度
+条件2: 速度","条件1: 0.25
+条件2: 0.15","条件1: 3
+条件2: 3"
+釣魚×計謀,phase>=2 &corner!=0 &order==1,加速度,0.2,2.4
+閃耀歌舞劇,phase>=2 &order_rate<=40 &behind_near_lane_time_set1>=1,速度,0.25,3
+卓越治癒術,phase==1 &change_order_onetime>0 &order_rate>=40,耐力恢复,0.035,瞬时
+一較高下！激烈對決！,is_finalcorner==1 &is_behind_in==1 &change_order_onetime<0 &order_rate>=40,速度,0.15,3
+賭上最強之名,phase>=2 &is_finalcorner==1 &order<=4 &overtake_target_time>=1,速度,0.15,3.6
+兀鷹猛擊波,is_finalcorner==1 &corner!=0 &is_overtake==1 &order>=4 &order_rate<=75,加速度,0.2,2.4
+暖風吹向永恆的瞬間,phase==1 &order>=3 &order_rate<=50 &is_overtake==1,速度,0.15,3
+花樣繽紛☆飛行演習,"条件1: is_finalcorner==1 &order_rate<=40 &change_order_onetime<0
+条件2: is_finalcorner==1 &order_rate>=50 &order_rate<=80 &change_order_onetime<0","条件1: 速度
+条件2: 加速度","条件1: 0.15
+条件2: 0.2","条件1: 3
+条件2: 2.4"
+Nemesis,is_finalcorner==1 &order_rate>=40 &order_rate<=75 &is_overtake==1,速度,0.15,3
+閃耀奪目☆STARDOM,phase==1 &corner==0 &order<=2 &bashin_diff_behind<=1,速度、加速度,0.05、0.1,3
+#LookatCurren,distance_rate>=50 &distance_rate<=65 &order>=2 &order_rate<=50 &change_order_onetime<0,速度、加速度,0.05、0.1,3
+青春燃燒．速度,phase_random==1,速度,0.35,1.8
+青春點火．速度,phase_random==1,速度,0.15,1.8
+青春燃燒．體能,phase_random==1,耐力恢复,0.055,瞬时
+青春點火．體能,phase_random==1,耐力恢复,0.015,瞬时
+青春燃燒．力量,phase_random==2,加速度,0.4,1.2
+青春點火．力量,phase_random==2,加速度,0.2,1.2
+青春燃燒．意志,phase_random==2,速度、加速度,0.25、0.3,1.8
+青春點火．意志,phase_random==2,速度、加速度,0.05、0.1,1.8
+青春燃燒．智慧,phase_random==0,横向速度、视野,0.035、15,4
+青春點火．智慧,phase_random==0,横向速度、视野,0.015、5,4
+鎖定前排,ground_type==2 &phase_random==2,横向速度、加速度,0.025、0.2,3
+目標是最前排！,ground_type==2 &phase_random==2,横向速度、加速度,0.035、0.3,3
+賽馬娘狂粉,near_count>=3 &accumulatetime>=5,速度,0.35,3
+沉靜的呼吸,running_style==3 &phase_laterhalf_random==0 &order_rate>=40,耐力恢复,0.015,瞬时
+潛伏態勢,running_style==3 &phase_laterhalf_random==0 &order_rate>=40,耐力恢复,0.055,瞬时
+吸睛謀略,phase==1 &order_rate<=50 &temptation_opponent_count_behind>=1,妨害（耐力恢复）,-0.03,瞬时
+三候秋收開始,distance_rate>=50 &order_rate>=40 &overtake_target_time>=2,速度,0.15,3
+繃帶木乃伊的惡作劇?,is_last_straight==1 &order<=4 &bashin_diff_infront<=1,速度、加速度,0.05、0.1,3
+Drain for rose,phase==1 &order>=2 &order_rate<=50,耐力恢复、妨害（耐力恢复）、速度,0.015、-0.0025、0.05,3
+一鼓作氣?Chu,distance_rate>=50 &activate_count_heal>=1 &order<=3,速度,0.15,3
+絕對是我,is_finalcorner==1 &is_overtake==1 &order<=5 &order_rate<=50 &overtake_target_no_order_up_time>=2,速度,0.25,3
+超級可愛?海洋潛水,phase==1 &order>=2 &order_rate<=80 &activate_count_middle>=2,耐力恢复、速度,0.015、0.05,3
+I Never Goof Up!,phase>=2 &change_order_onetime<0,速度、加速度,0.05、0.1,3
+KEEP IT REAL.,distance_rate>=50 &order_rate>=40 &order_rate<=80 &is_overtake==1,速度,0.05,3.6
+I'M☆FULL☆SPEED!!,"条件1: distance_rate>=45 &distance_rate<=60 &order>=2 &order_rate<=50 &is_overtake==1 &distance_type==1
+条件2: distance_rate>=45 &distance_rate<=60 &order>=2 &order_rate<=50 &is_overtake==1","条件1: 即时速度
+条件2: 速度","条件1: 0.05
+条件2: 0.05","条件1: 3
+条件2: 3"
+傾注一切,distance_type==3 &is_last_straight==1 &order_rate>=20 &order_rate<=60 &phase>=2,速度,0.15,3
+必死的決心,distance_type==3 &is_last_straight==1 &order_rate>=20 &order_rate<=60 &phase>=2,速度,0.35,3
+緊緊追著妳,distance_rate>=50 &order_rate>=40 &order_rate<=70,速度、妨害（速度）,0.05、-0.025,3.6
+秋初強風,season==3,被动（速度）、被动（力量）,60、60,始终
+劃破陰霾之響箭,phase>=2 &order_rate<=50 &overtake_target_time>=2,速度,0.15,3.6
+GET DOWN,is_finalcorner==1 &corner!=0 &order_rate>=30 &order_rate<=70 &blocked_side_continuetime>=2,速度、加速度,0.05、0.1,3
+立體美甲,ground_condition==1,被动（速度）,-40,始终
+淀之奇才,track_id==10008,被动（耐力）、被动（智力）、被动（速度）,60、60、60,始终
+彼端就在那前方……,phase>=2 &corner!=0 &is_finalcorner==0 &temptation_count==0 &order_rate>=50 &order_rate<=70 @phase==1 &corner!=0 &is_finalcorner==1 &temptation_count==0 &order_rate>=50 &order_rate<=70,加速度,0.2,2.4
+VIP常客,distance_type==4 &is_overtake==1 &accumulatetime>=5,耐力恢复,0.055,瞬时
+正面對決,running_style==2 &phase_firsthalf_random==2 &order_rate<=50,加速度,0.2,1.8
+聖夜的奇蹟奔馳！,activate_count_heal>=3 &distance_rate>=50,速度、加速度、耐力恢复,0.05、0.1、0.005,3
+Presents from X,order_rate_in50_continue==1 &phase==1 &distance_rate>=50 &order>=2 &order_rate<=40,速度,0.15,3
+適應沙塵,ground_type==2 &phase_random==1 &order_rate>=50,耐力恢复,0.015,瞬时
+Fairy tale,distance_rate>=50 &order>=2 &order_rate<=40 &blocked_side_continuetime>=2,速度,0.15,3
+見識一下白色閃電吧！,distance_rate>=50 &corner==0 &order_rate>=70 &order_rate<=75 &is_overtake==1 @distance_rate>=50 &corner==0 &order_rate<=30 &order_rate>=20,速度、加速度,0.15、0.05,3
+尾巴躍龍門,activate_count_middle>=3,速度,0.35,3
+壓軸好戲,distance_type==4 &phase_laterhalf_random==1 &order_rate<=50,速度,0.35,2.4
+暖場好戲,distance_type==4 &phase_laterhalf_random==1 &order_rate<=50,速度,0.15,2.4
+強攻計策,running_style==4 &phase_random==1 &order_rate>=50,速度,0.25,4
+提前進攻,running_style==4 &phase_random==1 &order_rate>=50,速度,0.05,4
+惠福的船歌,"条件1: remain_distance<=401 &remain_distance>=399 &order_rate<=40 &activate_count_all>=7
+条件2: remain_distance<=401 &remain_distance>=399 &order_rate<=40 &activate_count_all<=6","条件1: 速度
+条件2: 速度","条件1: 0.25
+条件2: 0.15","条件1: 3
+条件2: 3"
+113跌倒114爬起,is_finalcorner==1 &corner!=0 &distance_diff_top>=7,速度,0.05,3
+好賭之徒,distance_rate_after_random==50,速度、耐力恢复,0.45、-1,1.8
+可疑的作戰,distance_rate_after_random==50,速度、耐力恢复,0.25、-1,1.8
+春初暖風,season==1 @season==5,被动（速度）、被动（力量）,60、60,始终
+夢想是超越櫻花！,remain_distance<=300 &order_rate<=40 &bashin_diff_infront<=1,速度,0.15,3
+光芒一閃,distance_type==3 &straight_random==1,速度,0.35,3
+腳步輕盈,distance_type==1 &phase_laterhalf_random==1 &order_rate<=50,速度,0.15,2.4
+意氣昂揚,distance_type==1 &phase_laterhalf_random==1 &order_rate<=50,速度,0.35,2.4
+巧克力作戰行動,order<=4 &phase==1 &corner!=0 &bashin_diff_behind<=3,速度、耐力恢复,0.15、0.0035,3
+Guten Appetit?,change_order_up_finalcorner_after>=2 &is_last_straight==1,速度,0.15,3.6
+畢生夢想剎那翱翔,is_last_straight==1 &bashin_diff_behind<=1,速度、耐力恢复,0.25、-0.01,2.4
+迪奧斯庫洛伊流星,"条件1: is_last_straight==1 &distance_diff_top>=5 &order_rate<80
+条件2: is_last_straight==1 &distance_diff_top>=5 &order_rate>=80","条件1: 速度
+条件2: 速度","条件1: 0.15
+条件2: 0.25","条件1: 3
+条件2: 3"
+良好場地之鬼,ground_condition==1,被动（力量）、被动（速度）,60、60,始终
+烈風一閃,distance_type==4 &straight_random==1,速度,0.35,3
+強勢領頭,running_style==1,(未知),0,始终
+璀璨繁星,distance_rate_after_random==50,速度、加速度、耐力恢复,0.05、0.1、0.005,1.2
+一等星,distance_rate_after_random==50,速度、加速度、耐力恢复,0.25、0.3、0.035,1.2
+Schwarzes Schwert,"条件1: temptation_count==0 &order>=3 &is_last_straight==1 &order_rate_in80_continue==1 &order_rate_out40_continue==1
+条件2: temptation_count==0 &order>=3 &is_last_straight==1","条件1: 速度
+条件2: 速度","条件1: 0.25
+条件2: 0.15","条件1: 3
+条件2: 3"
+順時針之鬼,rotation==1,被动（速度）、被动（力量）,60、60,始终
+永世光輝為我照亮昏暗,"条件1: is_last_straight_onetime==1 &order>=2 &order<=5 &distance_diff_top<=5
+条件2: is_last_straight_onetime==1 &order>=2 &order<=5 &distance_diff_top>5","条件1: 速度
+条件2: 速度","条件1: 0.25
+条件2: 0.15","条件1: 3
+条件2: 3"
+勝利歡呼嘿呀！,"条件1: phase==2 &straight_front_type==2 &order<=2
+条件2: distance_rate>=50 &corner==3 &order<=2","条件1: 速度、加速度
+条件2: 速度","条件1: 0.05、0.1
+条件2: 0.05","条件1: 3
+条件2: 3"
+日本第一的賽馬娘,distance_type==4 &is_finalcorner_random==1,速度,0.35,3
+泰然自若,distance_type==4 &phase_firsthalf_random==1 &order_rate>=40 &order_rate<=80,耐力恢复、速度,0.075、-0.15,1.2
+我行我素,distance_type==4 &phase_firsthalf_random==1 &order_rate>=40 &order_rate<=80,耐力恢复、速度,0.035、-0.15,1.2
+清雅花信風,distance_rate>=50 &order_rate>=40 &order_rate<=80,速度,0.035,3
+起死回生,distance_type==3 &phase_firsthalf_random==2 &order_rate>=40,加速度,0.4,1.8
+機不可失,distance_type==3 &phase_firsthalf_random==2 &order_rate>=40,加速度,0.2,1.8
+氣勢如虹,distance_type==3 &phase==1 &order_rate<=80 &order_rate>=30 &blocked_side_continuetime>=2,速度、耐力恢复,0.35、0.035,2.4
+鬥爭心,distance_type==3 &phase==1 &order_rate<=80 &order_rate>=30 &blocked_side_continuetime>=2,速度、耐力恢复,0.15、0.005,2.4
+興奮感,distance_type==3 &phase_random==1 &order_rate>=50,速度,0.35,2.4
+積極前進,distance_type==3 &phase_random==1 &order_rate>=50,速度,0.15,2.4
+頂尖跑者,running_style==1 &phase<=1 &change_order_onetime>0 &accumulatetime>=5 @running_style==1 &phase<=1 &blocked_side_continuetime>=2 &accumulatetime>=5,速度,0.35,3
+短兵相接,running_style==2 &phase_firsthalf_random==2 &order_rate<=50,加速度,0.4,1.8
+花苞綻放之時,phase==1 &blocked_side_continuetime>=2 &corner!=0,加速度,0.2,2.4
+烈火撩亂，無敵之舞,is_finalcorner==1 &change_order_onetime<0,速度,0.15,3
+勢如破竹,distance_type==2 &is_finalcorner_random==1 &order_rate>=50,速度,0.35,1.8
+氣勢十足,distance_type==2 &is_finalcorner_random==1 &order_rate>=50,速度,0.15,1.8
+大膽無畏,running_style==3 &distance_rate_after_random==50 &order_rate>=30 &order_rate<=80,速度、加速度,0.35、0.1,2.4
+無畏之心,running_style==3 &distance_rate_after_random==50 &order_rate>=30 &order_rate<=80,速度、加速度,0.15、0.05,2.4
+Go☆Go☆for it!,"条件1前置: is_finalcorner==1 &change_order_onetime<0
+条件2前置: is_finalcorner==1 &change_order_onetime<0","条件1: 速度
+条件2: 速度","条件1: 0.15
+条件2: 0.15","条件1: 3.6
+条件2: 3"
+轟隆作響！特雷森應援團！！,distance_rate>=50 &order_rate_out70_continue==1 &temptation_count==0,加速度,0.2,2.4
+狂野旋風,distance_type==3 &phase_random==1 &order<=3,速度、妨害（速度）,0.35、-0.15,1.8
+灌注氣魄,distance_type==3 &phase_random==1 &order<=3,速度、妨害（速度）,0.15、-0.035,1.8
+充能完畢！全速前進！,条件1前置: remain_distance<=305 &remain_distance>=300 &slope==1,"条件1: 速度
+条件2: 速度","条件1: 0.25
+条件2: 0.05","条件1: 3
+条件2: 3"
+我先失陪！,behind_near_lane_time>=3 &accumulatetime>=10,速度,0.35,3
+遙遙領先之道,distance_rate>=50 &order_rate_in20_continue==1,耐力恢复、速度,0.015、0.05,3.6
+勇往直前,running_style==3 &phase_random==1,速度、耐力恢复,0.45、-0.02,2.4
+氣閥全開,running_style==3 &phase_random==1,速度、耐力恢复,0.25、-0.02,2.4
+Best day ever,"条件1: remain_distance>=401 &phase>=2 &is_finalcorner==1 &order_rate>=20 &order_rate<=40
+条件2: phase>=2 &is_finalcorner==1 &order_rate>=20 &order_rate<=40","条件1: 速度、加速度
+条件2: 速度","条件1: 0.15、0.05
+条件2: 0.15","条件1: 3
+条件2: 3"
+One True Color,remain_distance<=350 &order_rate<=40 &order_rate>=20 &bashin_diff_behind<=1,速度、加速度,0.05、0.1,3
+身為公主要親手取勝,is_last_straight==1 &blocked_side_continuetime>=2,速度,0.15,3
+YEAH☆VIVID TIME!,is_last_straight==1 &order_rate<=40 &overtake_target_time>=1 @is_last_straight==1 &order_rate<=40 &is_overtake==1,速度,0.15,3
+咚、啪、姆！,distance_rate>=50 &phase==1 &order>=3 &order_rate<=70,耐力恢复、速度,0.015、0.05,3
+Ravissant,is_finalcorner==1 &change_order_onetime<0 &order_rate<=40,速度,0.25,2.4
+Do Ya Breakin!,"条件1: phase>=2 &corner==0 &order<=2 &straight_front_type==2
+条件2: phase>=2 &corner==0 &order<=2","条件1: 速度、加速度
+条件2: 速度","条件1: 0.15、0.07
+条件2: 0.15","条件1: 3
+条件2: 3"
+沙之行家,ground_type==2 &phase_random==1 &order_rate>=50,耐力恢复、速度,0.055、0.35,1.8
+要衝嗎！要衝吧！,distance_rate>=50 &order_rate_out40_continue==1,速度,0.25,3
+我贏定了☆發動天堂鳥魔法！,order_rate_out50_continue==1 &temptation_count==0 &is_finalcorner==1,速度,0.15,3.6
+自制之心,always==1,被动（智力）、焦躁概率,60、-3,始终
+奔向讓人心動之處,distance_rate>=60 &slope==2 &phase==1 &order_rate>=40 &order_rate<=80 &remain_distance>=500,速度,0.15,3
+Joyful Voyage!,"条件1: distance_diff_top<=5 &order>=2 &order_rate<=40 &remain_distance<=201 &remain_distance>=199
+条件2: order>=2 &order_rate<=40 &remain_distance<=201 &remain_distance>=199","条件1: 速度、即时速度
+条件2: 速度","条件1: 0.15、0.035
+条件2: 0.15","条件1: 3
+条件2: 3"
+下坡靈巧,down_slope_random==1,速度,0.15,2.4
+月影一閃,running_style==4 &straight_random==1,速度,0.35,3
+尊爆☆最後衝—(???)—刺！,change_order_up_end_after>=2,速度、横向速度,0.15、0.015,3
+不要命令我！！,always==1,出迟时长、被动（智力）,0.085、-40,始终
+99 Problems,always==1,被动（毅力）、被动（智力）,-40、-40,始终
+trigger:BEAT,is_finalcorner==1 &order_rate>=40 &order_rate<=75 &lane_type==0,速度、横向速度,0.15、0.015,3
+光芒圓刃,distance_type==3 &all_corner_random==1,速度,0.35,3
+威風凜凜，揭夢！,条件1前置: track_id==10005,"条件1: 速度
+条件2: 速度","条件1: 0.25
+条件2: 0.05","条件1: 3
+条件2: 3"
+專心致志,is_badstart==0 &running_style==2 &distance_type==4 &phase_firsthalf_random==1,耐力恢复,0.075,瞬时
+毫無破綻,is_badstart==0 &running_style==2 &distance_type==4 &phase_firsthalf_random==1,耐力恢复,0.035,瞬时
+Adventure of 564,distance_rate_after_random==50,速度、触发金技,0.035、1,3
+波光粼粼的海，燦爛輝煌的你,distance_rate>=50 &order_rate<=40,速度,0.035,3
+熱血！！糾察之擊,phase>=2 &order_rate>=50 &is_finalcorner==1 &bashin_diff_infront<=1,加速度、加速度,0.05、0.05,1.2
+川崎賽場◎,track_id==10103,被动（耐力）,60,始终
+川崎賽場○,track_id==10103,被动（耐力）,40,始终
+川崎賽場×,track_id==10103,被动（耐力）,-40,始终
+船橋賽場◎,track_id==10104,被动（耐力）,60,始终
+船橋賽場○,track_id==10104,被动（耐力）,40,始终
+船橋賽場×,track_id==10104,被动（耐力）,-40,始终
+盛岡賽場◎,track_id==10105,被动（耐力）,60,始终
+盛岡賽場○,track_id==10105,被动（耐力）,40,始终
+盛岡賽場×,track_id==10105,被动（耐力）,-40,始终
+夜間賽◎,time==4,被动（智力）,60,始终
+夜間賽○,time==4,被动（智力）,40,始终
+夜間賽×,time==4,被动（智力）,-40,始终
+急彎◎,track_id==10001 @track_id==10002 @track_id==10004 @track_id==10010 @track_id==10103 @track_id==10104,被动（智力）,60,始终
+急彎○,track_id==10001 @track_id==10002 @track_id==10004 @track_id==10010 @track_id==10103 @track_id==10104,被动（智力）,40,始终
+急彎×,track_id==10001 @track_id==10002 @track_id==10004 @track_id==10010 @track_id==10103 @track_id==10104,被动（智力）,-40,始终
+交流主要競賽◎,is_dirtgrade==1,被动（速度）,60,始终
+交流主要競賽○,is_dirtgrade==1,被动（速度）,40,始终
+交流主要競賽×,is_dirtgrade==1,被动（速度）,-40,始终
+勝利的機運,ground_type==2 &phase_laterhalf_random==1 &order_rate<=50,速度,0.35,2.4
+明朗之兆,ground_type==2 &phase_laterhalf_random==1 &order_rate<=50,速度,0.15,2.4
+捲土重來,ground_type==2 &phase_random==1 &order_rate>=50,速度,0.35,2.4
+重振旗鼓,ground_type==2 &phase_random==1 &order_rate>=50,速度,0.15,2.4
+全速前進！,ground_type==2 &phase_random==3 &order_rate<=50 &is_lastspurt==1,速度,0.35,3
+長驅直入,ground_type==2 &phase_random==3 &order_rate<=50 &is_lastspurt==1,速度,0.15,3
+明鏡止水,ground_type==2 &order_rate>=50 &activate_count_heal>=1 &distance_rate<=42 &phase==1,速度,0.35,1.8
+思緒清晰,ground_type==2 &order_rate>=50 &activate_count_heal>=1 &distance_rate<=42 &phase==1,速度,0.15,1.8
+優雅地沙浴,ground_type==2 &accumulatetime>=5 &infront_near_lane_time>=3,速度,0.35,3
+沙浴○,ground_type==2 &accumulatetime>=5 &infront_near_lane_time>=3,速度,0.15,3
+沙浴×,ground_type==2 &accumulatetime>=5 &infront_near_lane_time>=3,速度,-0.2,3
+目標是中央站位！,ground_type==2 &phase_random==2 &order_rate<=50,加速度,0.4,3
+熱情十足,ground_type==2 &phase_random==2 &order_rate<=50,加速度,0.2,3
+爆走模式！,ground_type==2 &phase_random==2 &order_rate>=50,加速度,0.4,3
+緊急上升,ground_type==2 &phase_random==2 &order_rate>=50,加速度,0.2,3
+超群的邁步,"条件1: ground_type==2 &base_power>=1200
+条件2: ground_type==2 &base_power>=1000 &base_power<1200","条件1: 被动（速度）
+条件2: 被动（速度）","条件1: 80
+条件2: 60","条件1: 始终
+条件2: 始终"
+熟練邁步,"条件1: ground_type==2 &base_power>=1200
+条件2: ground_type==2 &base_power>=1000 &base_power<1200","条件1: 被动（速度）
+条件2: 被动（速度）","条件1: 40
+条件2: 20","条件1: 始终
+条件2: 始终"
+泥巴大師,ground_type==2 &ground_condition==3 @ground_type==2 &ground_condition==4,被动（速度）、被动（力量）,60、60,始终
+玩泥巴◎,ground_type==2 &ground_condition==3 @ground_type==2 &ground_condition==4,被动（速度）,60,始终
+玩泥巴○,ground_type==2 &ground_condition==3 @ground_type==2 &ground_condition==4,被动（速度）,40,始终
+玩泥巴×,ground_type==2 &ground_condition==3 @ground_type==2 &ground_condition==4,被动（速度）,-40,始终
+沙上的舞姬,ground_type==2 &accumulatetime>=10 &phase==0 &order<=1 &bashin_diff_behind<=1,妨害（速度）,-0.25,3
+塵煙,ground_type==2 &accumulatetime>=10 &phase==0 &order<=1 &bashin_diff_behind<=1,妨害（速度）,-0.15,3
+大意失荊州,ground_type==2 &distance_rate>=50 &is_other_character_activate_advantage_skill==9,妨害（速度）,-0.25,3
+壓迫感,ground_type==2 &distance_rate>=50 &is_other_character_activate_advantage_skill==9,妨害（速度）,-0.15,3
+開運天翔,phase_laterhalf_random==1,速度,0.05,3
+勢不可擋,phase_random==1 &running_style==2,速度,0.35,2.4
+進攻的姿態,phase_random==1 &running_style==2,速度,0.15,2.4
+想和你一起獲得勝利,distance_rate_after_random==50 &order_rate<=65,速度、加速度,0.35、0.2,1.2
+夢想的途中,distance_rate_after_random==50 &order_rate<=65,速度、加速度,0.15、0.07,1.2
+α-star*,"条件1: distance_rate>=40 &distance_rate<=50 &distance_diff_rate<=10 &ground_type==2
+条件2: distance_rate>=40 &distance_rate<=50 &distance_diff_rate<=10","条件1: 速度、耐力恢复
+条件2: 速度","条件1: 0.05、0.005
+条件2: 0.05","条件1: 3.6
+条件2: 3.6"
+突破,phase_random==1 &running_style==4 &order_rate>=50,速度、横向速度,0.35、0.035,2.4
+突圍計策,phase_random==1 &running_style==4 &order_rate>=50,速度、横向速度,0.15、0.015,2.4
+1000％輸出！,phase_firsthalf_random==1 &running_style==1,速度、耐力恢复,0.45、-0.04,2.7
+孜孜不倦,phase_firsthalf_random==1 &running_style==1,速度、耐力恢复,0.25、-0.04,2.7
+直達夢想的彼端！,is_lastspurt==1 &is_last_straight==1 &order_rate>=40,速度、速度,0.05、0.05,3.6
+Hephaistos,phase>=2 &is_finalcorner_laterhalf==1 &order_rate<=75 &order_rate>=40,速度,0.15,3
+雪光，追上去吧,distance_diff_top<=5 &remain_distance<=300 &order_rate<=40,速度,0.15,3
+紫電一閃,distance_type==1 &straight_random==1,速度,0.35,3
+電光石火,distance_type==1 &phase>=2 &order_rate>=50 &is_overtake==1 @distance_type==2 &phase>=2 &order_rate>=50 &is_overtake==1,加速度,0.4,2
+一飛衝天,distance_type==1 &phase>=2 &order_rate>=50 &is_overtake==1 @distance_type==2 &phase>=2 &order_rate>=50 &is_overtake==1,加速度,0.2,2
+「I'm possible」,"条件1: remain_distance<=201 &remain_distance>=199 &distance_diff_top<=5 &order>=2
+条件2: remain_distance<=201 &remain_distance>=199 &distance_diff_top<=10 &order>=2","条件1: 速度
+条件2: 速度","条件1: 0.25
+条件2: 0.15","条件1: 3
+条件2: 3"
+搶到好位置了！,infront_near_lane_time>=3 &accumulatetime>=10,速度,0.35,3
+萌到讓我活過來了！,near_count>=3 &phase==1 &corner!=0 &order_rate>=40,速度,0.15,3
+Spooky-Scary-Happy,is_last_straight_onetime==1 &order_rate<=40,速度、妨害（速度）、妨害（速度）,0.15、-0.025、-0.025,3
+Silent letter,remain_distance<=400 &order<=2 &overtake_target_time>=1,速度、加速度,0.05、0.1,3
+風雲之志,running_style==2 &order>=2 &distance_diff_top<=5 &distance_rate>=60 &phase==1,速度,0.25,4
+上進心,running_style==2 &order>=2 &distance_diff_top<=5 &distance_rate>=60 &phase==1,速度,0.05,4
+渾然忘我,distance_type==4 &running_style==3 &is_lastspurt==1 &order_rate>=40,加速度、耐力恢复,0.4、-0.02,1.5
+不顧一切,distance_type==4 &running_style==3 &is_lastspurt==1 &order_rate>=40,加速度、耐力恢复,0.2、-0.02,1.5
+春光明媚,"条件1前置: distance_rate>=50 &order_rate_out20_continue==1
+条件2前置: distance_rate>=50 &order_rate_out20_continue==1","条件1: 加速度
+条件2: 加速度","条件1: 0.07
+条件2: 0.05","条件1: 4.8
+条件2: 4.8"
+過關斬將,distance_type==3 &running_style==2 &phase_laterhalf_random==1 &distance_diff_top<=10,速度、加速度,0.25、0.3,3
+穩健的步伐,distance_type==3 &running_style==2 &phase_laterhalf_random==1 &distance_diff_top<=10,速度、加速度,0.05、0.1,3
+火神鳴,activate_count_middle>=2,速度、速度,0.05、0.025,3.6
+燈穗,phase>=2 &corner!=0 &order_rate>=60 &is_overtake==1,速度,0.15,3
+賭徒,"条件1: popularity<=3 &random_lot==30
+条件2: popularity>=4 &random_lot==60","条件1: 被动（速度）、被动（力量）、被动（毅力）
+条件2: 被动（速度）、被动（力量）、被动（毅力）","条件1: 80、80、80
+条件2: 80、80、80","条件1: 始终
+条件2: 始终"
+投機取巧,"条件1: popularity<=3 &random_lot==15
+条件2: popularity>=4 &random_lot==30","条件1: 被动（速度）、被动（力量）、被动（毅力）
+条件2: 被动（速度）、被动（力量）、被动（毅力）","条件1: 40、40、40
+条件2: 40、40、40","条件1: 始终
+条件2: 始终"
+身處存亡之際，面顯猖狂訕笑,"条件1前置: is_finalcorner==1 &is_overtake==1
+条件2前置: is_finalcorner==1 &is_overtake==1","条件1: 速度
+条件2: 速度","条件1: 0.25
+条件2: 0.15","条件1: 3
+条件2: 3"
+銳腳一閃,running_style==3 &straight_random==1,速度,0.35,3
+超越極限,is_lastspurt==1 &phase_random==3,速度,0.35,2.4
+只注視前方,is_lastspurt==1 &phase_random==3,速度,0.15,2.4
+競賽的精髓．速度,phase_laterhalf_random==1,速度,0.15,2
+競賽的精髓．體能,phase_random==3 &hp_per>=2 &is_lastspurt==1,速度、耐力恢复,0.25、-0.02,3
+競賽的精髓．力量,phase==3 &is_overtake==1 &is_lastspurt==1,速度,0.15,4
+競賽的精髓．意志,compete_fight_count>0,加速度,0.2,1.2
+競賽的精髓．智慧,activate_count_later_half>=2,速度,0.15,2
+競賽的精髓．心得,motivation>=4,被动（耐力）、被动（毅力）、被动（智力）,40、40、40,始终
+Never Say Never,"条件1: remain_distance>=299 &remain_distance<=301 &order_rate>=20 &order_rate<=40 &distance_diff_top<=5 &ground_type==2
+条件2: remain_distance>=299 &remain_distance<=301 &order_rate>=20 &order_rate<=40","条件1: 速度、即时速度
+条件2: 速度","条件1: 0.05、0.05
+条件2: 0.05","条件1: 3
+条件2: 3"
+最高檔速,running_style==3 &is_last_straight==1 &order>=2 &distance_diff_top<=10,速度,0.45,2.4
+迅猛之腳,running_style==3 &is_last_straight==1 &order>=2 &distance_diff_top<=10,速度,0.25,2.4
+遙不可及的影子,running_style==1 &is_last_straight==1 &order==1 &bashin_diff_behind<=1,速度,0.45,2.4
+堅定不移,running_style==1 &is_last_straight==1 &order==1 &bashin_diff_behind<=1,速度,0.25,2.4
+猛追,running_style==2 &distance_rate>=50 &is_overtake==1 @running_style==3 &distance_rate>=50 &is_overtake==1,速度,0.35,2.4
+咬住不放,running_style==2 &distance_rate>=50 &is_overtake==1 @running_style==3 &distance_rate>=50 &is_overtake==1,速度,0.15,2.4
+發揮本領,distance_diff_top<=10 &distance_rate>=60 &phase==1,加速度,0.2,1.2
+Into High Gear!,"条件1前置: phase>=1 &slope==2 &order_rate>=50 &order_rate<=80 &track_id==10006
+条件2前置: phase>=1 &slope==2 &order_rate>=50 &order_rate<=80","条件1: 速度、加速度
+条件2: 速度","条件1: 0.15、0.05
+条件2: 0.15","条件1: 3
+条件2: 2.4"
+Queen's Lumination,"条件1: distance_rate>=50 &corner==0 &order==1 &bashin_diff_behind<=1
+条件2: distance_rate>=50 &corner==0 &order<=2","条件1: 速度
+条件2: 速度","条件1: 0.15
+条件2: 0.05","条件1: 3.6
+条件2: 3.6"
+舉起吧，我的靈魂之劍！,"条件1: phase>=2 &remain_distance<=401 &remain_distance>=399 &order_rate<=40 &grade==100 &popularity<=3
+条件2: phase>=2 &remain_distance<=401 &remain_distance>=399 &order_rate<=40","条件1: 速度
+条件2: 速度","条件1: 0.25
+条件2: 0.15","条件1: 3
+条件2: 3"
+怪物,distance_diff_top<=10 &distance_rate>=60 &phase==1,加速度,0.4,1.2
+灰色臨界點,phase>=2 &is_finalcorner_laterhalf==1 &order_rate<=40,速度,0.15,3
+過人的衝勁,distance_rate>=66 &order_rate_out50_continue==1 &temptation_count==0,加速度,0.4,1.2
+衝勁,distance_rate>=66 &order_rate_out50_continue==1 &temptation_count==0,加速度,0.2,1.2
+消散烏雲的黃金甲箭,distance_rate>=40 &distance_rate<=50 &order_rate>=40 &order_rate<=80,速度、耐力恢复,0.15、0.005,3
+吉兆驚天大放送！,phase>=2 &corner!=0 &remain_distance>=600 &order<=3,即时速度、加速度,0.15、0.05,2.4
+閃耀吧☆苫小牧,phase==1 &blocked_side_continuetime>=2 &corner!=0,加速度,0.07,2.4
+義無反顧,distance_type==2 &phase_laterhalf_random==1 &order_rate<=50,速度,0.35,2.4
+不顧後果,distance_type==2 &phase_laterhalf_random==1 &order_rate<=50,速度,0.15,2.4
+超厲害的第一名支持度,always==1,焦躁概率,10,始终
+嗨起來嗨起來把手都舉高！,"条件1: distance_type==1 &phase_laterhalf_random==1 &order_rate<=50 @distance_type==2 &phase_laterhalf_random==1 &order_rate<=50
+条件2: distance_type==3 &phase_laterhalf_random==1 &order_rate<=50 @distance_type==4 &phase_laterhalf_random==1 &order_rate<=50","条件1: 速度
+条件2: 速度","条件1: 0.05
+条件2: 0.05","条件1: 3.6
+条件2: 3"
+陣風圓刃,running_style==1 &all_corner_random==1,速度,0.35,3
+銳腳圓刃,running_style==3 &all_corner_random==1,速度,0.35,3
+至高的下坡強者,down_slope_random==1,速度,0.35,2.4
+獻給你的拉花,"条件1: distance_rate>=60 &slope==2 &phase==1 &order>=2 &distance_diff_top<=10 &distance_type==3
+条件2: distance_rate>=60 &slope==2 &phase==1 &order>=2 &distance_diff_top<=10 &distance_type!=3","条件1: 速度、加速度
+条件2: 速度","条件1: 0.15、0.05
+条件2: 0.15","条件1: 2.4
+条件2: 2.4"
+清新☆待客,phase_firsthalf_random==1 &order_rate<=30,速度、耐力恢复,0.05、0.005,3.6
+Ding Dong Boo,"条件1: compete_fight_count>0 &ground_type==2
+条件2: compete_fight_count>0","条件1: 速度、加速度
+条件2: 速度","条件1: 0.05、0.2
+条件2: 0.05","条件1: 3
+条件2: 3"
+天衣無縫,distance_type==3 &corner_random==3 &order_rate>=50 @distance_type==4 &corner_random==3 &order_rate>=50,即时速度,0.35,3
+破格,distance_type==3 &corner_random==3 &order_rate>=50 @distance_type==4 &corner_random==3 &order_rate>=50,即时速度,0.15,3
+形成優勢,distance_type==2 &phase_random==1 @distance_type==3 &phase_random==1,速度,0.35,2.4
+優雅的步伐,distance_type==2 &phase_random==1 @distance_type==3 &phase_random==1,速度,0.15,2.4
+太陽的睿智,phase==1 &blocked_side_continuetime>=2,速度,0.35,1.8
+太陽的庇護,phase==1 &blocked_side_continuetime>=2,速度,0.15,1.8
+大海的睿智,phase_firsthalf_random==0,加速度,0.4,1.5
+大海的庇護,phase_firsthalf_random==0,加速度,0.2,1.5
+大地的睿智,phase_laterhalf_random==2,速度,0.35,2.4
+大地的庇護,phase_laterhalf_random==2,速度,0.15,2.4
+抒情，往旅途的終點,"条件1: distance_type==3 &phase_laterhalf_random==1 &order_rate>50 @distance_type==4 &phase_laterhalf_random==1 &order_rate>50
+条件2: distance_type==1 &phase_laterhalf_random==1 &order_rate>50 @distance_type==2 &phase_laterhalf_random==1 &order_rate>50","条件1: 速度
+条件2: 速度","条件1: 0.05
+条件2: 0.05","条件1: 3.6
+条件2: 3.6"
+引擎全開！大噴射！,"条件1: distance_rate>=34 &distance_rate<=36 &order==1 &bashin_diff_behind>=1
+条件2: phase==3 &is_activate_other_skill_detail==1","条件1: 速度
+条件2: 速度","条件1: 0.035
+条件2: -0.05","条件1: 10.4
+条件2: 500"
+威風凜凜,running_style==3 &order_rate>=40 &is_finalcorner_random==1,速度、妨害（速度）、妨害（速度）,0.35、-0.15、-0.15,1.8
+壓力,running_style==3 &order_rate>=40 &is_finalcorner_random==1,速度、妨害（速度）、妨害（速度）,0.15、-0.035、-0.035,1.8
+開拓未來的奇蹟,distance_type==1 &phase_random==2,加速度,0.4,1.8
+保持至高,distance_rate>=66 &distance_rate<=68 &order_rate>=60 &order_rate<=90 &temptation_count==0,即时速度、妨害（速度）,0.05、-0.025,3
+神速,distance_rate_after_random==50,即时速度、耐力恢复,0.35、0.015,3
+快速,distance_rate_after_random==50,即时速度、耐力恢复,0.15、0.0035,3
+一發必中,distance_type==4 &phase_laterhalf_random==1 &order_rate>=50,速度,0.35,2.4
+鎖定,distance_type==4 &phase_laterhalf_random==1 &order_rate>=50,速度,0.15,2.4
+Mission: Triumph,"条件1: distance_rate>=40 &corner==0 &slope==2 &order_rate>=40 &order_rate<=80
+条件2: distance_rate>=40 &corner==0 &order_rate>=40 &order_rate<=80","条件1: 速度
+条件2: 速度","条件1: 0.15
+条件2: 0.15","条件1: 3.6
+条件2: 3"
+脫兔的彼端,distance_type==4 &phase_random==1,耐力恢复、速度,0.055、0.25,2.4
+心無旁鶩,distance_type==4 &phase_random==1,耐力恢复、速度,0.015、0.05,2.4
+盛開吧盛開吧！我！,phase==1 &blocked_side_continuetime>=2,加速度,0.2,3
+Danser le présent,phase>=2 &is_last_straight==1 &order_rate>=20 &order_rate<=40 &bashin_diff_behind<=1,速度、即时速度、耐力恢复,0.15、0.035、-0.03,3
+一氣呵成,distance_type==4 &running_style==3 &phase_firsthalf_random==2 &lastspurt==2,即时速度,0.35,3
+匆促,distance_type==4 &running_style==3 &phase_firsthalf_random==2 &lastspurt==2,即时速度,0.15,3
+花開，世界,"条件1: distance_type==4 &distance_rate>=50 &distance_rate<=51 &order_rate>=30 &order_rate<=80
+条件2: distance_rate>=50 &distance_rate<=51 &order_rate>=30 &order_rate<=80","条件1: 速度、耐力恢复
+条件2: 速度","条件1: 0.05、0.035
+条件2: 0.05","条件1: 3.6
+条件2: 3"
+冷性發光,distance_type==3 &activate_count_all>=13,即时速度,0.35,2.4
+點火,distance_type==3 &activate_count_all>=13,即时速度,0.15,2.4
+飛向星辰彼端,"条件1: distance_rate>=50 &distance_rate<=55 &order_rate>=40 &order_rate<=80 &distance_type==3 &activate_count_all>=7
+条件2: distance_rate>=50 &distance_rate<=55 &order_rate>=40 &order_rate<=80","条件1: 速度
+条件2: 速度","条件1: 0.25
+条件2: 0.15","条件1: 3
+条件2: 3"
+磐石的架式,activate_count_start>=3,加速度,0.4,3
+滿溢的熱情,running_style==3 &phase_laterhalf_random==0 &order_rate>=40,速度,0.15,2.4
+開始推進,running_style==3 &phase_laterhalf_random==1 &order_rate>=40,速度,0.15,2.4
+CHERRY☆亂擊,order<=3 &remain_distance<=401 &remain_distance>=399,加速度,0.05,0.6
+滾呀滾！？強力迴旋,"条件1: distance_rate>=50 &corner!=0 &order_rate>=40 &order_rate<=80 &distance_type==3
+条件2: distance_rate>=50 &corner!=0 &order_rate>=40 &order_rate<=80","条件1: 速度、加速度
+条件2: 速度","条件1: 0.05、0.05
+条件2: 0.05","条件1: 1.2
+条件2: 1.2"
+千里之行,running_style==3 &phase_random==1 &order_rate>=40 &order_rate<=90,速度,0.25,4
+始於足下,running_style==3 &phase_random==1 &order_rate>=40 &order_rate<=90,速度,0.05,4
+Bang☆大爆冷門的奇蹟！,"条件1: distance_type==4 &order_rate>=40 &order_rate<=70 &is_finalcorner_laterhalf==1 &popularity>=4
+条件2: order_rate>=40 &order_rate<=70 &is_finalcorner_laterhalf==1","条件1: 速度
+条件2: 速度","条件1: 0.25
+条件2: 0.05","条件1: 3.6
+条件2: 3.6"
+虎嘯風生,base_speed>=1000 &base_power>=1000 &distance_type==2 @base_speed>=1000 &base_power>=1000 &distance_type==3,被动（速度）、被动（力量）,60、60,始终
+自信家,base_speed>=1000 &base_power>=1000 &distance_type==2 @base_speed>=1000 &base_power>=1000 &distance_type==3,被动（速度）、被动（力量）,20、20,始终
+激昂的心跳,distance_type==3 &phase_firsthalf_random==2 &order_rate>=30 &order_rate<=80 @distance_type==4 &phase_firsthalf_random==2 &order_rate>=30 &order_rate<=80,即时速度,0.35,3
+湧現熱量,distance_type==3 &phase_firsthalf_random==2 &order_rate>=30 &order_rate<=80 @distance_type==4 &phase_firsthalf_random==2 &order_rate>=30 &order_rate<=80,即时速度,0.15,3
+雷霆的揚棄,phase>=2 &order_rate>=50,即时速度,0.15,3
+豪風圓刃,distance_type==2 &all_corner_random==1,速度,0.35,3
+超大份量！一口定情！,change_order_up_middle>=3,速度、加速度,0.15、0.05,2.4
+Flowering Dreams,"条件1: order>=2 &order_rate<=70 &remain_distance<=201 &remain_distance>=199 &near_count>=3
+条件2: order>=2 &order_rate<=70 &remain_distance<=201 &remain_distance>=199","条件1: 速度、即时速度
+条件2: 速度","条件1: 0.15、0.035
+条件2: 0.15","条件1: 3
+条件2: 3"
+萬彩☆美麗★世界,"条件1: distance_rate<=50 &distance_rate>=40 &order_rate<=80 &order_rate>=50 &near_count>=1 &visiblehorse>=4
+条件2: distance_rate<=50 &distance_rate>=40 &order_rate<=80 &order_rate>=50 &near_count>=1","条件1: 速度
+条件2: 速度","条件1: 0.2
+条件2: 0.15","条件1: 3
+条件2: 3"
+青嵐,season==2,被动（速度）、被动（力量）,60、60,始终
+熱情澎湃,distance_type==2 &phase_firsthalf_random==2 &order_rate<=50,加速度,0.4,1.8
+雀躍,distance_type==2 &phase_firsthalf_random==2 &order_rate<=50,加速度,0.2,1.8
+超☆嗨↑心情,distance_type==4 &phase_random==1,速度、耐力恢复,0.35、0.035,2.4
+心情上升,distance_type==4 &phase_random==1,速度、耐力恢复,0.15、0.005,2.4
+GALmem.直到永遠?,"条件1: distance_rate>=40 &distance_rate<=50 &order_rate>=40 &order_rate<=80 &motivation==5
+条件2: distance_rate>=40 &distance_rate<=50 &order_rate>=40 &order_rate<=80","条件1: 速度
+条件2: 速度","条件1: 0.1
+条件2: 0.05","条件1: 3.6
+条件2: 3.6"
+奧義．盛夏燃燒！！,"条件1: distance_type==1 &remain_distance<=201 &remain_distance>=199 &order_rate>=20 &order_rate<=50 &change_order_up_end_after>=1
+条件2: remain_distance<=201 &remain_distance>=199 &order_rate>=20 &order_rate<=50","条件1: 速度
+条件2: 速度","条件1: 0.25
+条件2: 0.05","条件1: 3
+条件2: 3"
+破曉錦旗「葛城榮主」！,"条件1: corner==3 &order==1 &track_id==10006 &distance_type==3
+条件2: corner==3 &order==1","条件1: 速度、耐力恢复
+条件2: 速度、耐力恢复","条件1: 0.05、0.005
+条件2: 0.05、0.005","条件1: 3.6
+条件2: 3"
+絢爛焦灼,"条件1: remain_distance>=799 &remain_distance<=801 &order_rate>=30 &order_rate<=60 &course_distance==2400 &popularity<=3
+条件2: remain_distance>=799 &remain_distance<=801 &order_rate>=30 &order_rate<=60","条件1: 加速度
+条件2: 加速度","条件1: 0.3
+条件2: 0.07","条件1: 2.4
+条件2: 2.4"
+突擊魂,running_style==3 &phase_laterhalf_random==1 &order_rate>=40,速度,0.35,2.4
+比誰都前方！,distance_type==3 &phase==0,加速度,0.4,1.5
+搶得先機,distance_type==3 &phase==0,加速度,0.2,1.5
+奇異點,"条件1: running_style==2 &distance_type==3 &base_speed>=1200 &base_wiz>=1200
+条件2: running_style==2 &distance_type==3 &base_speed>=1200 &base_wiz<1200","条件1: 被动（速度）
+条件2: 被动（速度）","条件1: 80
+条件2: 60","条件1: 始终
+条件2: 始终"
+探求心,"条件1: running_style==2 &distance_type==3 &base_speed>=1200 &base_wiz>=1200
+条件2: running_style==2 &distance_type==3 &base_speed>=1200 &base_wiz<1200","条件1: 被动（速度）
+条件2: 被动（速度）","条件1: 40
+条件2: 20","条件1: 始终
+条件2: 始终"
+邁向水平線的彼端,条件1前置: phase==1 &bashin_diff_behind>=3 &order==1,"条件1: 即时速度
+条件2: 即时速度","条件1: 0.25
+条件2: 0.05","条件1: 3
+条件2: 3"
+夏日天空下的光暈,"条件1: distance_rate>=50 &corner!=0 &order_rate>=20 &order_rate<=50 &track_id==10005
+条件2: distance_rate>=50 &corner!=0 &order_rate>=20 &order_rate<=50","条件1: 速度、加速度
+条件2: 速度","条件1: 0.25、0.025
+条件2: 0.25","条件1: 2.4
+条件2: 2.4"
+將軍,running_style==2 &phase>=2 &is_finalcorner==1 &corner!=0 &remain_distance>=600 &order_rate<=70 @running_style==3 &phase>=2 &is_finalcorner==1 &corner!=0 &remain_distance>=600 &order_rate<=70,加速度,0.4,0.9
+自信的一步,running_style==2 &phase>=2 &is_finalcorner==1 &corner!=0 &remain_distance>=600 &order_rate<=70 @running_style==3 &phase>=2 &is_finalcorner==1 &corner!=0 &remain_distance>=600 &order_rate<=70,加速度,0.2,0.9
+永不放棄,phase_corner_random==1,速度,0.25,4
+堅毅之心,phase_corner_random==1,速度,0.05,4
+隆尚賽場◎,track_id==10201,被动（耐力）,60,始终
+隆尚賽場○,track_id==10201,被动（耐力）,40,始终
+隆尚賽場×,track_id==10201,被动（耐力）,-40,始终
+隆尚奇才,track_id==10201,被动（耐力）、被动（智力）、被动（速度）,60、60、60,始终
+最高峰的夢想,is_last_straight==1,速度,0.35,2.4
+背負意志,is_last_straight==1,速度,0.15,2.4
+Road to Glory,distance_rate>=60 &phase==1 &order>=2 &order_rate<=40,速度,0.25,3
+路況差勁之鬼,ground_condition==2 @ground_condition==3 @ground_condition==4,被动（力量）、被动（速度）,60、60,始终
+Vive la GOLD,"条件1: distance_type==3 &is_finalcorner==1 &is_overtake==1 &order_rate>=50 &is_badstart==1 @distance_type==4 &is_finalcorner==1 &is_overtake==1 &order_rate>=50 &is_badstart==1
+条件2: distance_type==3 &is_finalcorner==1 &is_overtake==1 &order_rate>=50 @distance_type==4 &is_finalcorner==1 &is_overtake==1 &order_rate>=50","条件1: 速度
+条件2: 速度","条件1: 0.25
+条件2: 0.15","条件1: 3
+条件2: 3"
+鑽石鋒芒,"条件1: phase_laterhalf_random==1 &order_rate>=40 &order_rate<=80 &distance_type==3
+条件2: phase_laterhalf_random==1 &order_rate>=40 &order_rate<=80 &distance_type!=3","条件1: 速度
+条件2: 速度","条件1: 0.15
+条件2: 0.05","条件1: 3
+条件2: 3"
+月影圓刃,running_style==4 &all_corner_random==1,速度,0.35,3
+幸福的藍光,"条件1: distance_type==1 &phase_firsthalf_random==2 &order_rate<=50 &order_rate>=20 @distance_type==2 &phase_firsthalf_random==2 &order_rate<=50 &order_rate>=20
+条件2: distance_type==3 &phase_firsthalf_random==2 &order_rate<=50 &order_rate>=20 @distance_type==4 &phase_firsthalf_random==2 &order_rate<=50 &order_rate>=20","条件1: 即时速度
+条件2: 即时速度","条件1: 0.15
+条件2: 0.05","条件1: 3
+条件2: 3"
+...found you.,条件1前置: phase==1 &change_order_onetime>0 &order_rate>=50 &order_rate<=80,"条件1: 速度
+条件2: 速度","条件1: 0.25
+条件2: 0.15","条件1: 3
+条件2: 3"
+Immortal Work,distance_rate>=50 &distance_rate<=51 &order_rate>=40 &order_rate<=80,速度,0.15,3
+十全十美,distance_type==2 &corner_random==3 &order_rate<=50 @distance_type==3 &corner_random==3 &order_rate<=50,即时速度,0.35,3
+品行端正,distance_type==2 &corner_random==3 &order_rate<=50 @distance_type==3 &corner_random==3 &order_rate<=50,即时速度,0.15,3
+就這樣和愛一起熔解吧,remain_distance>=999 &remain_distance<=1001 &order_rate>=20 &order_rate<=50,速度,0.15,3
+堅守信念,distance_type==1 &phase_laterhalf_random==1 &order_rate>=40,速度,0.35,2.4
+專注前進,distance_type==1 &phase_laterhalf_random==1 &order_rate>=40,速度,0.15,2.4
+爽快剛勁,phase>=1 &slope==1 &order_rate>=40 &order_rate<=80,速度,0.15,3
+歌舞昇平，趣味橫生,"条件1前置: distance_rate>=50 &order_rate<=50 &overtake_target_time>=2
+条件2前置: distance_rate>=50 &order_rate<=50 &overtake_target_time>=2","条件1: 速度、即时速度
+条件2: 速度","条件1: 0.15、0.035
+条件2: 0.15","条件1: 3
+条件2: 3"
+轟出去吧！,running_style==2 &phase_random==1 &order_rate<=50,速度,0.25,4
+邁向勝利,running_style==2 &phase_random==1 &order_rate<=50,速度,0.05,4
+瞄準目標,running_style==2 &distance_type==4 &phase_firstquarter_random==2 &order_rate<=50,加速度,0.2,1.2
+中期靈巧,phase_random==1,速度,0.15,1.8
+初期靈巧,phase_laterhalf_random==0,速度,0.15,1.8
+Billions of stars,phase>=2 &is_last_straight==1 &order==1,速度,0.05,3
+冷冽之風,season==4,被动（速度）、被动（力量）,60、60,始终
+jingle all the way,distance_rate>=40 &corner==0 &order==1,速度,0.05,4.2
+Illuminate you,"条件1: phase==1 &order_rate>=40 &order_rate<=80
+条件2: is_activate_other_skill_detail==1 &base_stamina>=1200 &phase>=2","条件1: 耐力恢复、速度
+条件2: 即时速度","条件1: 0.035、-0.15
+条件2: 0.035","条件1: 1.2
+条件2: 4.8"
+Reversal Illusion,"条件1前置: change_order_up_middle>=1 &is_finalcorner==1 &corner!=0 &order_rate<=70 &order_rate>=40
+条件2前置: is_finalcorner==1 &corner!=0 &order_rate<=70 &order_rate>=40","条件1: 速度
+条件2: 速度","条件1: 0.25
+条件2: 0.15","条件1: 3
+条件2: 3"
+Celeste Oath,"条件1: distance_rate>=45 &distance_rate<=55 &order_rate>=20 &order_rate<=50 &course_distance>=2400
+条件2: distance_rate>=45 &distance_rate<=55 &order_rate>=20 &order_rate<=50","条件1: 速度、耐力恢复
+条件2: 速度、耐力恢复","条件1: 0.15、0.005
+条件2: 0.15、0.0035","条件1: 3
+条件2: 3"
+畫龍點睛,distance_type==4 &running_style==1 &phase_firsthalf_random==2 &lastspurt==2,即时速度,0.35,3
+終幕,distance_type==4 &running_style==1 &phase_firsthalf_random==2 &lastspurt==2,即时速度,0.15,3
+水滴石穿萬里行,distance_type==4 &running_style==1 &is_lastspurt==1 &corner==0 &order<=3,加速度,0.4,0.9
+無所迷惘,distance_type==4 &running_style==1 &is_lastspurt==1 &corner==0 &order<=3,加速度,0.2,0.9
+成為大家的我！,"条件1: phase<=1 &change_order_onetime>0 &accumulatetime>=5 &order_rate<=50 @phase<=1 &blocked_side_continuetime>=2 &accumulatetime>=5 &order_rate<=50
+条件2: is_activate_other_skill_detail==1 &order<=2 &distance_rate>=50 &distance_type==4","条件1: 速度
+条件2: 速度","条件1: 0.15
+条件2: 0.05","条件1: 1.8
+条件2: 3.6"
+Q彈．陽光普照,"条件1: phase>=2 &is_finalcorner==1 &order_rate>=40 &distance_type==3
+条件2: phase>=2 &is_finalcorner==1 &order_rate>=40","条件1: 即时速度
+条件2: 速度","条件1: 0.25
+条件2: 0.25","条件1: 2.4
+条件2: 2.4"
+打call&回應,"条件1: ground_type==2 &phase==1 &is_activate_any_skill==1
+条件2: is_activate_other_skill_detail==1 &phase>=2 &is_activate_any_skill==1","条件1: 速度
+条件2: 即时速度","条件1: 0.25
+条件2: 0.25","条件1: 2.4
+条件2: 2.4"
+未雨綢繆,"条件1: ground_type==2 &phase==1 &is_activate_any_skill==1
+条件2: is_activate_other_skill_detail==1 &phase>=2 &is_activate_any_skill==1","条件1: 速度
+条件2: 即时速度","条件1: 0.05
+条件2: 0.05","条件1: 2.4
+条件2: 2.4"
+除去沙塵,ground_type==2 &phase_random==1 &order_rate<=50,耐力恢复,0.015,瞬时
+絢爛☆噴泉,"条件1前置: phase>=2 &is_last_straight_onetime==1 &order_rate>=30 &order_rate<=70 &temptation_count==0
+条件2前置: phase>=2 &is_last_straight_onetime==1 &order_rate>=30 &order_rate<=70","条件1: 速度
+条件2: 速度","条件1: 0.25
+条件2: 0.05","条件1: 3
+条件2: 3"
+紫電圓刃,distance_type==1 &all_corner_random==1,速度,0.35,3
+一網打盡,distance_type==4 &running_style==4 &phase_firsthalf_random==2 &lastspurt==2,即时速度,0.35,3
+脫穎而出,distance_type==4 &running_style==4 &phase_firsthalf_random==2 &lastspurt==2,即时速度,0.15,3
+火箭起跑,distance_type==1 &phase==0,加速度,0.4,1.5
+急速起步,distance_type==1 &phase==0,加速度,0.2,1.5
+由衷的喵情款待,"条件1前置: distance_rate>=50 &order_rate_out40_continue==1
+条件2前置: distance_rate>=50 &order_rate_out40_continue==1","条件1: 即时速度
+条件2: 即时速度","条件1: 0.15
+条件2: 0.05","条件1: 3
+条件2: 3"
+請多多品嚐看看餒！,"条件1: distance_rate>=45 &distance_rate<=55 &order_rate>=20 &order_rate<=50 &is_overtake==1 &distance_type==2
+条件2: distance_rate>=45 &distance_rate<=55 &order_rate>=20 &order_rate<=50 &is_overtake==1","条件1: 速度
+条件2: 速度","条件1: 0.25
+条件2: 0.15","条件1: 2.4
+条件2: 2.4"
+疾風暴衝飛駒衝刺！,order_rate>=45 &distance_rate>=50 &change_order_onetime<0,速度,0.25,2.4
+洞察機先的對決,phase_laterhalf_random==0,速度,0.35,1.8
+君臨,distance_type==3 &running_style==4 &phase>=2 &is_finalcorner==1 &corner!=0 &order_rate>=40,加速度,0.4,0.9
+全力以赴的步伐,distance_type==3 &running_style==4 &phase>=2 &is_finalcorner==1 &corner!=0 &order_rate>=40,加速度,0.2,0.9
+沸騰血潮,running_style==4 &is_last_straight==1 &order>=2 &distance_diff_top<=10,速度,0.25,2.4
+不動之心,running_style==4 &phase_laterhalf_random==0 &order_rate>=50,耐力恢复,0.015,瞬时
+推力十足,running_style==4 &phase_laterhalf_random==1 &order_rate>=40,速度,0.15,2.4
+瓦解敵勢,running_style==4 &order_rate>=50 &is_finalcorner_random==1,速度、妨害（速度）、妨害（速度）,0.15、-0.035、-0.035,1.8
+毫無保留,running_style==4 &phase_random==1,速度、耐力恢复,0.25、-0.02,2.4
+踏影而行,running_style==4 &distance_rate>=50 &is_overtake==1,速度,0.15,2.4
+鬼氣逼人,distance_type==3 &running_style==4 &phase_random==1 &order_rate>=50,速度、妨害（速度）,0.15、-0.035,1.8
+爆熱的閃耀光輝！,distance_type==2 &phase_random==1 @distance_type==3 &phase_random==1,速度,0.35,1.8
+燃燒靈魂,distance_type==2 &phase_random==1 @distance_type==3 &phase_random==1,速度,0.15,1.8
+運動員之魂,"条件1: distance_type==2 &distance_rate_after_random==50 &base_guts>=1200 @distance_type==3 &distance_rate_after_random==50 &base_guts>=1200
+条件2: distance_type==2 &distance_rate_after_random==50 &base_guts<1200 @distance_type==3 &distance_rate_after_random==50 &base_guts<1200","条件1: 即时速度
+条件2: 即时速度","条件1: 0.25
+条件2: 0.15","条件1: 1.2
+条件2: 1.2"
+百鍊成鋼,is_lastspurt==1 &phase==3 &temptation_count==0,速度,0.05,3.6
+羅剎，振赤翼直至九霄,"条件1: distance_rate>=50 &distance_rate<=51 &order_rate>=50
+条件2: phase>=2 &is_activate_other_skill_detail==1 &is_finalcorner==1 &corner!=0 &is_overtake==1","条件1: 速度
+条件2: 即时速度","条件1: 0.15
+条件2: 0.035","条件1: 3
+条件2: 1.8"

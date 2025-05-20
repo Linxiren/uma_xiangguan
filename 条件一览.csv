@@ -1,0 +1,38 @@
+含义,代码,备注,,含义,代码
+序盘,phase==0 @phase_random==0,1-4赛段,,名次范围,order_rate
+中盘,phase==1 @phase_random==1,5-16赛段,,名次,order
+终盘,phase==2 @phase_random==2,17-20赛段,,比赛距离,course_distance
+最终冲刺,phase==3 @phase_random==3,21-24赛段,,剩余距离,remain_distance
+序盘前半,phase_firsthalf_random==0,,,与第一名距离,distance_diff_top
+序盘后半,phase_laterhalf_random==0,,,紧跟前方时间,infront_near_lane_time
+中盘前半,phase_firsthalf_random==1,,,剩余体力,hp_per
+中盘后半,phase_laterhalf_random==1,,,被超越次数(小于0为超越次数),change_order_onetime
+终盘前半,phase_firsthalf_random==2,,,超越次数,change_order_up
+终盘后半,phase_laterhalf_random==2,,,侧面阻挡时间,blocked_side_continuetime
+终盘前四分之一,phase_firstquarter_random==2,,,前方被阻隔时间,blocked_front_continuetime
+最终冲刺前半,phase_firsthalf_random==3,,,赛事进行时间,accumulatetime
+短距离,distance_type==1,,,技能回复体力次数,activate_count_heal
+英里,distance_type==2,,,,
+中距离,distance_type==3,,,,
+长距离,distance_type==4,,,,
+草地,ground_type==1,,,,
+沙地,ground_type==2,,,,
+逃,running_style==1,,,,
+先,running_style==2,,,,
+差,running_style==3,,,,
+追,running_style==4,,,,
+最后冲刺,is_lastspurt==1,,,,
+最终弯道,is_finalcorner==1 &corner!=0 @is_finalcorner_random==1,,,,
+最终弯道后半及往后,is_finalcorner_laterhalf==1,,,,
+最终弯道及往后,is_finalcorner==1,,,,
+最终直线,is_last_straight==1 @is_last_straight_onetime==1,,,,
+弯道,all_corner_random==1 @corner!=0 @corner_random==1 @corner_random==2 @corner_random==3 @corner_random==4,,,,
+第三弯道,corner_random==3,,,,
+直线,straight_random==1 @corner==0,,,,
+非弯道,corner==0,,,,
+准备超车,is_overtake==1,,,,
+下坡,down_slope_random==1,,,,
+上坡,up_slope_random==1,,,,
+最大冲刺距离时冲刺,lastspurt==2,,,,
+无出迟,is_badstart==0,,,,
+追比状态,compete_fight_count>0,,,,
